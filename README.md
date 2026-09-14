@@ -1,5 +1,10 @@
 # Kingfisher Park — Homepage V1
 
+## Client Revision V3 — Living Light autoplay
+
+The Living Light Hero now automatically progresses through Daylight, Golden Hour, and After Dark while keeping the slider, active labels, scene crossfades, tide note, and firefly intensity synchronized. Autoplay pauses for visitor interaction, when the Hero leaves the viewport, when the tab is hidden, and when reduced-motion is requested. The implementation uses browser-native JavaScript/CSS only and is designed to be portable to a Wix Studio Custom Element/Velo implementation.
+
+
 This package is the first meaningful VS Code homepage prototype based on the approved **Kingfisher Park Master Development Prompt V2**.
 
 ## Included in this checkpoint

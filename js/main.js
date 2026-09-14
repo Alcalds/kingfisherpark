@@ -85,7 +85,16 @@
   const timeStatus = document.getElementById('living-time-status');
   const cta = document.getElementById('living-cta');
   const ctaLabel = document.getElementById('living-cta-label');
+  const conditionNote = document.getElementById('living-condition');
   const canvas = document.getElementById('firefly-canvas');
+
+
+  // ------------------------------------------------
+  // Visitor guide print / save action
+  // ------------------------------------------------
+  document.querySelectorAll('[data-print-guide]').forEach((button) => {
+    button.addEventListener('click', () => window.print());
+  });
 
   if (!hero || !range) return;
 
@@ -93,22 +102,19 @@
     day: {
       context: 'MANGROVE KAYAK',
       time: 'DAYLIGHT',
-      cta: 'BOOK MANGROVE KAYAK',
-      href: 'booking.html?experience=mangrove',
+      condition: 'Availability depends on low/high tide conditions and resulting water depth.',
       aria: 'Daylight'
     },
     golden: {
       context: 'GOLDEN HOUR',
       time: 'GOLDEN HOUR',
-      cta: 'EXPLORE EVENING EXPERIENCES',
-      href: 'experiences.html#after-dark',
+      condition: '',
       aria: 'Golden hour'
     },
     night: {
       context: 'FIREFLY BOARDWALK · NIGHT KAYAK',
       time: 'AFTER DARK',
-      cta: 'BOOK A NIGHT EXPERIENCE',
-      href: 'booking.html?experience=night-kayak',
+      condition: '',
       aria: 'After dark'
     }
   };
@@ -135,8 +141,13 @@
 
     if (contextLabel) contextLabel.textContent = copy.context;
     if (timeStatus) timeStatus.textContent = copy.time;
-    if (ctaLabel) ctaLabel.textContent = copy.cta;
-    if (cta) cta.href = copy.href;
+    if (ctaLabel) ctaLabel.textContent = 'BOOK YOUR EXPERIENCE';
+    if (cta) cta.href = 'booking.html';
+    if (conditionNote) {
+      const conditionText = conditionNote.querySelector('span');
+      conditionNote.hidden = !copy.condition;
+      if (conditionText) conditionText.textContent = copy.condition;
+    }
 
     range.setAttribute('aria-valuetext', copy.aria);
 
@@ -170,19 +181,179 @@
     range.value = String(Math.round(percent));
   };
 
+  // ------------------------------------------------
+  // Living Light autoplay
+  //
+  // Wix Studio portability note:
+  // This uses only plain DOM events, requestAnimationFrame, timers,
+  // IntersectionObserver and matchMedia. The same behavior can be
+  // moved into a Wix Custom Element / Velo implementation without
+  // relying on an external animation library.
+  // ------------------------------------------------
+  const autoStops = [8, 50, 92];
+  const AUTO_HOLD_MS = 6800;
+  const AUTO_TRANSITION_MS = 1900;
+  const AUTO_RESUME_MS = 12000;
+
+  let autoTimer = 0;
+  let resumeTimer = 0;
+  let lightRaf = 0;
+  let autoHeroVisible = true;
+  let autoPageVisible = !document.hidden;
+  let heroHasFocus = false;
+
+  const clearAutoTimer = () => {
+    window.clearTimeout(autoTimer);
+    autoTimer = 0;
+  };
+
+  const clearResumeTimer = () => {
+    window.clearTimeout(resumeTimer);
+    resumeTimer = 0;
+  };
+
+  const stopLightTransition = () => {
+    if (lightRaf) cancelAnimationFrame(lightRaf);
+    lightRaf = 0;
+  };
+
+  const closestStopIndex = (value) => {
+    let bestIndex = 0;
+    let bestDistance = Infinity;
+
+    autoStops.forEach((stop, index) => {
+      const distance = Math.abs(stop - value);
+      if (distance < bestDistance) {
+        bestDistance = distance;
+        bestIndex = index;
+      }
+    });
+
+    return bestIndex;
+  };
+
+  const canAutoPlay = () =>
+    !reduceMotion.matches &&
+    autoHeroVisible &&
+    autoPageVisible &&
+    !heroHasFocus;
+
+  const easeInOutCubic = (t) =>
+    t < 0.5
+      ? 4 * t * t * t
+      : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+  const animateLightTo = (target, duration, onComplete) => {
+    stopLightTransition();
+
+    const start = Number(range.value);
+    const startedAt = performance.now();
+
+    const tick = (now) => {
+      if (!canAutoPlay()) {
+        lightRaf = 0;
+        return;
+      }
+
+      const elapsed = now - startedAt;
+      const progress = clamp(elapsed / duration);
+      const eased = easeInOutCubic(progress);
+      const nextValue = start + (target - start) * eased;
+
+      setLight(nextValue);
+
+      if (progress < 1) {
+        lightRaf = requestAnimationFrame(tick);
+      } else {
+        lightRaf = 0;
+        setLight(target);
+        onComplete?.();
+      }
+    };
+
+    lightRaf = requestAnimationFrame(tick);
+  };
+
+  const scheduleAutoAdvance = (delay = AUTO_HOLD_MS) => {
+    clearAutoTimer();
+    if (!canAutoPlay()) return;
+
+    autoTimer = window.setTimeout(() => {
+      autoTimer = 0;
+      if (!canAutoPlay()) return;
+
+      const currentValue = Number(range.value);
+      const currentIndex = closestStopIndex(currentValue);
+      const targetIndex = (currentIndex + 1) % autoStops.length;
+      const target = autoStops[targetIndex];
+
+      animateLightTo(target, AUTO_TRANSITION_MS, () => {
+        scheduleAutoAdvance();
+      });
+    }, delay);
+  };
+
+  const pauseAutoplayForInteraction = () => {
+    clearAutoTimer();
+    clearResumeTimer();
+    stopLightTransition();
+
+    resumeTimer = window.setTimeout(() => {
+      resumeTimer = 0;
+      scheduleAutoAdvance(900);
+    }, AUTO_RESUME_MS);
+  };
+
+  const syncAutoplay = () => {
+    if (!canAutoPlay()) {
+      clearAutoTimer();
+      stopLightTransition();
+      return;
+    }
+
+    if (!autoTimer && !lightRaf && !resumeTimer) {
+      scheduleAutoAdvance();
+    }
+  };
+
   range.addEventListener('input', (event) => {
+    pauseAutoplayForInteraction();
     setLight(event.currentTarget.value);
   });
 
+  range.addEventListener('pointerdown', pauseAutoplayForInteraction);
+  range.addEventListener('keydown', pauseAutoplayForInteraction);
+
   stageButtons.forEach((button) => {
     button.addEventListener('click', () => {
+      pauseAutoplayForInteraction();
       const value = Number(button.dataset.lightStage || 0);
       setLight(value);
       range.focus({ preventScroll: true });
     });
   });
 
+  hero.addEventListener('focusin', () => {
+    heroHasFocus = true;
+    clearAutoTimer();
+    stopLightTransition();
+  });
+
+  hero.addEventListener('focusout', () => {
+    window.setTimeout(() => {
+      heroHasFocus = hero.contains(document.activeElement);
+      if (!heroHasFocus) {
+        clearResumeTimer();
+        resumeTimer = window.setTimeout(() => {
+          resumeTimer = 0;
+          syncAutoplay();
+        }, AUTO_RESUME_MS);
+      }
+    }, 0);
+  });
+
   setLight(range.value);
+  scheduleAutoAdvance();
 
   // ------------------------------------------------
   // Fireflies
@@ -400,20 +571,30 @@
   const heroObserver = 'IntersectionObserver' in window
     ? new IntersectionObserver((entries) => {
         heroVisible = entries[0]?.isIntersecting ?? true;
+        autoHeroVisible = heroVisible;
         syncAnimation();
-      }, { threshold: 0.02 })
+        syncAutoplay();
+      }, { threshold: 0.08 })
     : null;
 
   heroObserver?.observe(hero);
 
   document.addEventListener('visibilitychange', () => {
     pageVisible = !document.hidden;
+    autoPageVisible = pageVisible;
     syncAnimation();
+    syncAutoplay();
   });
 
   const handleMotionChange = () => {
     rebuildParticles();
+    if (reduceMotion.matches) {
+      clearAutoTimer();
+      clearResumeTimer();
+      stopLightTransition();
+    }
     syncAnimation();
+    syncAutoplay();
   };
 
   if (typeof reduceMotion.addEventListener === 'function') {

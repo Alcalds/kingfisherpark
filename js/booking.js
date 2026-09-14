@@ -13,23 +13,51 @@
   const guestInput = document.getElementById('guest-count');
   const guestPlural = document.getElementById('guest-plural');
   const dateInput = document.getElementById('visit-date');
+  const expectationTitle = document.getElementById('expectation-title');
+  const expectationIntro = document.getElementById('expectation-intro');
+  const expectationPrice = document.getElementById('expectation-price');
+  const expectationPoints = document.getElementById('expectation-points');
 
   const experienceData = {
     mangrove: {
       name: 'Mangrove Kayak',
-      rate: 600
+      rate: 600,
+      intro: 'Explore Kingfisher Park’s mangrove waterways by kayak when tide level and water depth are suitable.',
+      points: [
+        'Availability depends on low/high tide conditions and resulting water depth.',
+        'This is an outdoor water-based nature experience.',
+        'Follow guide and safety instructions throughout the activity.'
+      ]
     },
     firefly: {
       name: 'Firefly Boardwalk',
-      rate: 400
+      rate: 400,
+      intro: 'Experience the mangrove landscape after dark from the Firefly Boardwalk.',
+      points: [
+        'Keep voices and unnecessary noise low during wildlife viewing.',
+        'Avoid flash photography around fireflies.',
+        'Follow park and guide instructions on dark paths and viewing areas.'
+      ]
     },
     'night-kayak': {
       name: 'Fireflies + Night Kayak',
-      rate: 600
+      rate: 600,
+      intro: 'Combine the Firefly Boardwalk with kayaking for bioluminescent plankton and additional firefly viewing.',
+      points: [
+        'The experience takes place after dark and includes a water component.',
+        'Tide, weather and natural conditions can affect the experience.',
+        'Keep noise low, avoid flash around fireflies and follow your guide.'
+      ]
     },
     complete: {
       name: 'The Complete Experience',
-      rate: 1000
+      rate: 1000,
+      intro: 'Combine the park’s three current visitor activities in one visit.',
+      points: [
+        'Includes the park’s current daytime and after-dark experience set.',
+        'Exact sequence and timing are confirmed through the live booking system.',
+        'All responsible-viewing and guide instructions apply throughout the visit.'
+      ]
     }
   };
 
@@ -49,12 +77,13 @@
 
   const stepLabels = {
     1: 'Experience',
-    2: 'Date & Time',
-    3: 'Guests',
-    4: 'Details',
-    5: 'Review',
-    6: 'Demo Payment',
-    7: 'Confirmed'
+    2: 'What to Expect',
+    3: 'Date & Time',
+    4: 'Guests',
+    5: 'Details',
+    6: 'Review',
+    7: 'Demo Payment',
+    8: 'Confirmed'
   };
 
   const peso = (value) => `₱${Number(value || 0).toLocaleString('en-PH')}`;
@@ -96,6 +125,24 @@
     }).format(date);
   };
 
+  const updateExpectation = () => {
+    const exp = experienceData[state.experience];
+    if (!exp) {
+      if (expectationTitle) expectationTitle.textContent = 'Your experience';
+      if (expectationIntro) expectationIntro.textContent = 'Choose an experience first to see the most relevant visitor notes.';
+      if (expectationPrice) expectationPrice.textContent = '—';
+      if (expectationPoints) expectationPoints.innerHTML = '';
+      return;
+    }
+
+    if (expectationTitle) expectationTitle.textContent = exp.name;
+    if (expectationIntro) expectationIntro.textContent = exp.intro;
+    if (expectationPrice) expectationPrice.textContent = `${peso(exp.rate)} / person`;
+    if (expectationPoints) {
+      expectationPoints.innerHTML = exp.points.map((point) => `<li>${point}</li>`).join('');
+    }
+  };
+
   const updateSummary = () => {
     readFormState();
 
@@ -111,10 +158,11 @@
 
     const mobileStep = document.getElementById('booking-mobile-step');
     const mobileTotal = document.getElementById('booking-mobile-total');
-    if (mobileStep) mobileStep.textContent = `Step ${state.step} of 7 · ${stepLabels[state.step]}`;
+    if (mobileStep) mobileStep.textContent = `Step ${state.step} of 8 · ${stepLabels[state.step]}`;
     if (mobileTotal) mobileTotal.textContent = peso(currentTotal());
 
     guestPlural.textContent = state.guests === 1 ? '' : 's';
+    updateExpectation();
   };
 
   const setError = (message = '') => {
@@ -164,7 +212,7 @@
       return false;
     }
 
-    if (stepNumber === 2) {
+    if (stepNumber === 3) {
       if (!state.visitDate) {
         setError('Please choose a preferred visit date.');
         dateInput.focus();
@@ -178,13 +226,13 @@
       }
 
       if (!form.elements.timePendingAck.checked) {
-        setError('Please acknowledge that exact time slots are still awaiting client confirmation.');
+        setError('Please acknowledge that exact time slots will appear only when confirmed.');
         form.elements.timePendingAck.focus();
         return false;
       }
     }
 
-    if (stepNumber === 3) {
+    if (stepNumber === 4) {
       if (!Number.isFinite(state.guests) || state.guests < 1) {
         setError('Please enter at least one guest.');
         guestInput.focus();
@@ -192,7 +240,7 @@
       }
     }
 
-    if (stepNumber === 4) {
+    if (stepNumber === 5) {
       const requiredFields = [
         form.elements.fullName,
         form.elements.email,
@@ -208,7 +256,7 @@
       }
     }
 
-    if (stepNumber === 5 && !form.elements.reviewAck.checked) {
+    if (stepNumber === 6 && !form.elements.reviewAck.checked) {
       setError('Please confirm that you have reviewed the prototype booking information.');
       form.elements.reviewAck.focus();
       return false;
@@ -259,13 +307,13 @@
     button.addEventListener('click', () => {
       if (!validateStep(state.step)) return;
 
-      if (state.step === 4) populateReview();
-      if (state.step === 5) {
+      if (state.step === 5) populateReview();
+      if (state.step === 6) {
         populateReview();
         document.getElementById('payment-total').textContent = peso(currentTotal());
       }
 
-      showStep(Math.min(7, state.step + 1));
+      showStep(Math.min(8, state.step + 1));
     });
   });
 
@@ -304,7 +352,7 @@
     button.disabled = false;
     button.removeAttribute('aria-busy');
     button.innerHTML = original;
-    showStep(7);
+    showStep(8);
   });
 
   document.getElementById('print-summary')?.addEventListener('click', () => {

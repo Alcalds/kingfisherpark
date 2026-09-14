@@ -86,17 +86,18 @@
         <div class="booking-flow">
           <ol class="booking-progress" id="booking-progress" aria-label="Booking progress">
             <li class="is-active" data-progress-step="1"><span>1</span><small>Experience</small></li>
-            <li data-progress-step="2"><span>2</span><small>Date &amp; Time</small></li>
-            <li data-progress-step="3"><span>3</span><small>Guests</small></li>
-            <li data-progress-step="4"><span>4</span><small>Details</small></li>
-            <li data-progress-step="5"><span>5</span><small>Review</small></li>
-            <li data-progress-step="6"><span>6</span><small>Demo Payment</small></li>
-            <li data-progress-step="7"><span>7</span><small>Confirmed</small></li>
+            <li data-progress-step="2"><span>2</span><small>What to Expect</small></li>
+            <li data-progress-step="3"><span>3</span><small>Date &amp; Time</small></li>
+            <li data-progress-step="4"><span>4</span><small>Guests</small></li>
+            <li data-progress-step="5"><span>5</span><small>Details</small></li>
+            <li data-progress-step="6"><span>6</span><small>Review</small></li>
+            <li data-progress-step="7"><span>7</span><small>Demo Payment</small></li>
+            <li data-progress-step="8"><span>8</span><small>Confirmed</small></li>
           </ol>
 
 
           <div class="booking-mobile-status" id="booking-mobile-status" aria-live="polite">
-            <span id="booking-mobile-step">Step 1 of 7 · Experience</span>
+            <span id="booking-mobile-step">Step 1 of 8 · Experience</span>
             <strong id="booking-mobile-total">₱0</strong>
           </div>
 
@@ -108,7 +109,7 @@
               <div class="step-heading">
                 <span>STEP 01</span>
                 <h2 id="step-1-title" tabindex="-1">Choose your experience.</h2>
-                <p>Current September 2026 rates are shown per person.</p>
+                <p>Current rates are shown per person.</p>
               </div>
 
               <fieldset class="experience-options">
@@ -120,7 +121,7 @@
                   <span class="option-copy">
                     <strong>Mangrove Kayak</strong>
                     <small>Explore the park's waterways by kayak.</small>
-                    <em>Dependent on current tide depth.</em>
+                    <em>Availability depends on low/high tide conditions and resulting water depth.</em>
                   </span>
                   <span class="option-price">₱600<small>/ person</small></span>
                 </label>
@@ -165,27 +166,69 @@
               </div>
             </section>
 
+
             <!-- STEP 2 -->
-            <section class="booking-step" data-step="2" aria-labelledby="step-2-title" hidden>
+            <section class="booking-step expectation-step" data-step="2" aria-labelledby="step-2-title" hidden>
               <div class="step-heading">
                 <span>STEP 02</span>
-                <h2 id="step-2-title" tabindex="-1">Choose a preferred date.</h2>
-                <p>Exact booking time slots have not yet been supplied by the client.</p>
+                <h2 id="step-2-title" tabindex="-1">Know what to expect.</h2>
+                <p>Review the character of your selected experience before choosing a date.</p>
+              </div>
+
+              <div class="expectation-panel">
+                <div class="expectation-topline">
+                  <span id="expectation-type">SELECTED EXPERIENCE</span>
+                  <strong id="expectation-price">—</strong>
+                </div>
+                <h3 id="expectation-title">Your experience</h3>
+                <p id="expectation-intro">Choose an experience first to see the most relevant visitor notes.</p>
+                <ul class="expectation-points" id="expectation-points"></ul>
+              </div>
+
+              <div class="expectation-basics" aria-label="Before you book">
+                <article>
+                  <span>01</span>
+                  <strong>Dress for nature</strong>
+                  <p>Wear comfortable clothing and suitable footwear for outdoor, dark or uneven conditions.</p>
+                </article>
+                <article>
+                  <span>02</span>
+                  <strong>Follow your guide</strong>
+                  <p>Observe park and guide instructions, especially around water, paths and wildlife-viewing areas.</p>
+                </article>
+                <article>
+                  <span>03</span>
+                  <strong>Respect the habitat</strong>
+                  <p>Keep noise low and avoid flash photography around fireflies and other sensitive wildlife.</p>
+                </article>
+              </div>
+
+              <div class="step-actions">
+                <button class="booking-prev" type="button" data-prev>← BACK</button>
+                <button class="button booking-next" type="button" data-next>CHOOSE DATE <span aria-hidden="true">→</span></button>
+              </div>
+            </section>
+
+            <!-- STEP 3 -->
+            <section class="booking-step" data-step="3" aria-labelledby="step-3-title" hidden>
+              <div class="step-heading">
+                <span>STEP 03</span>
+                <h2 id="step-3-title" tabindex="-1">Choose a preferred date.</h2>
+                <p>Final activity time slots will appear only when confirmed availability is configured.</p>
               </div>
 
               <div class="date-time-grid">
                 <div class="field-group">
                   <label for="visit-date">Preferred visit date</label>
                   <input id="visit-date" name="visitDate" type="date" required>
-                  <small>Select any future date for prototype testing.</small>
+                  <small>Select a preferred visit date for this booking prototype.</small>
                 </div>
 
                 <div class="time-pending">
                   <span class="time-status">TIME SLOT</span>
                   <strong>To be confirmed by Kingfisher Park</strong>
                   <p>
-                    We are intentionally not inventing activity time slots. The final Wix
-                    booking system will display only client-confirmed availability.
+                    The live booking system will display only confirmed availability and time slots.
                   </p>
                 </div>
               </div>
@@ -193,8 +236,7 @@
               <label class="acknowledge-box">
                 <input type="checkbox" name="timePendingAck" required>
                 <span>
-                  I understand that the exact activity time is not configured in this prototype
-                  and would be confirmed by Kingfisher Park in the real booking system.
+                  I understand that the exact activity time will be shown only when confirmed availability is configured.
                 </span>
               </label>
 
@@ -204,12 +246,12 @@
               </div>
             </section>
 
-            <!-- STEP 3 -->
-            <section class="booking-step" data-step="3" aria-labelledby="step-3-title" hidden>
+            <!-- STEP 4 -->
+            <section class="booking-step" data-step="4" aria-labelledby="step-4-title" hidden>
               <div class="step-heading">
-                <span>STEP 03</span>
-                <h2 id="step-3-title" tabindex="-1">How many guests?</h2>
-                <p>Current source material provides per-person pricing only.</p>
+                <span>STEP 04</span>
+                <h2 id="step-4-title" tabindex="-1">How many guests?</h2>
+                <p>Current pricing is per person.</p>
               </div>
 
               <div class="guest-control">
@@ -222,7 +264,7 @@
               </div>
 
               <p class="guest-note">
-                No maximum capacity, child rate, senior/PWD rate or group discount is assumed in this prototype.
+                Current pricing is per person. Any final capacity limits or special-rate policies will appear only after they are confirmed.
               </p>
 
               <div class="step-actions">
@@ -231,12 +273,12 @@
               </div>
             </section>
 
-            <!-- STEP 4 -->
-            <section class="booking-step" data-step="4" aria-labelledby="step-4-title" hidden>
+            <!-- STEP 5 -->
+            <section class="booking-step" data-step="5" aria-labelledby="step-5-title" hidden>
               <div class="step-heading">
-                <span>STEP 04</span>
-                <h2 id="step-4-title" tabindex="-1">Guest details.</h2>
-                <p>Only information reasonably useful for a reservation is requested.</p>
+                <span>STEP 05</span>
+                <h2 id="step-5-title" tabindex="-1">Guest details.</h2>
+                <p>Enter the contact details needed to manage your reservation.</p>
               </div>
 
               <div class="details-grid">
@@ -280,11 +322,11 @@
               </div>
             </section>
 
-            <!-- STEP 5 -->
-            <section class="booking-step" data-step="5" aria-labelledby="step-5-title" hidden>
+            <!-- STEP 6 -->
+            <section class="booking-step" data-step="6" aria-labelledby="step-6-title" hidden>
               <div class="step-heading">
-                <span>STEP 05</span>
-                <h2 id="step-5-title" tabindex="-1">Review before checkout.</h2>
+                <span>STEP 06</span>
+                <h2 id="step-6-title" tabindex="-1">Review before checkout.</h2>
                 <p>Check the details and the current per-person calculation.</p>
               </div>
 
@@ -312,8 +354,8 @@
                   <p>Tide/weather/natural-condition notices and responsible-viewing guidance.</p>
                 </div>
                 <div>
-                  <strong>Awaiting client confirmation</strong>
-                  <p>Cancellation, refund, rescheduling, no-show and final payment policies.</p>
+                  <strong>Final booking terms</strong>
+                  <p>Cancellation, refund, rescheduling, no-show and final payment policies will appear before live checkout.</p>
                 </div>
               </div>
 
@@ -331,11 +373,11 @@
               </div>
             </section>
 
-            <!-- STEP 6 -->
-            <section class="booking-step" data-step="6" aria-labelledby="step-6-title" hidden>
+            <!-- STEP 7 -->
+            <section class="booking-step" data-step="7" aria-labelledby="step-7-title" hidden>
               <div class="step-heading">
-                <span>STEP 06</span>
-                <h2 id="step-6-title" tabindex="-1">Demo checkout.</h2>
+                <span>STEP 07</span>
+                <h2 id="step-7-title" tabindex="-1">Demo checkout.</h2>
                 <p>No real payment credentials are requested or stored.</p>
               </div>
 
@@ -344,8 +386,7 @@
                 <span>SECURE PAYMENT · WIX STAGE</span>
                 <h3 id="payment-total">₱0</h3>
                 <p>
-                  In the final Wix site, this area will be connected to the approved payment
-                  provider. Provider selection is still awaiting client confirmation.
+                  In the final Wix site, this area will connect to the approved secure payment provider.
                 </p>
 
                 <p class="demo-payment-disclaimer" id="demo-payment-disclaimer">
@@ -374,12 +415,12 @@
               </div>
             </section>
 
-            <!-- STEP 7 -->
-            <section class="booking-step booking-confirmation" data-step="7" aria-labelledby="step-7-title" hidden>
+            <!-- STEP 8 -->
+            <section class="booking-step booking-confirmation" data-step="8" aria-labelledby="step-8-title" hidden>
               <div class="confirmation-mark" aria-hidden="true">✓</div>
               <div class="step-heading">
                 <span>DEMO CONFIRMATION</span>
-                <h2 id="step-7-title" tabindex="-1">Your prototype booking is complete.</h2>
+                <h2 id="step-8-title" tabindex="-1">Your prototype booking is complete.</h2>
                 <p>No real reservation or payment was created.</p>
               </div>
 
