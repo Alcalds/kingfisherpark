@@ -192,3 +192,7 @@ The homepage biodiversity area has also been reduced to a four-image preview, wi
 See:
 
 `docs/HERO_LIVING_LIGHT_V1.md`
+
+## Latest client revision — V5 compact reservation request
+
+The booking page has been simplified from an 8-step checkout prototype to a compact mobile-first reservation-request form. It collects only the essential visit/contact information, shows the relevant experience rate and tide/condition notice, and clearly states that staff confirmation is required. See `docs/CLIENT_REVISION_V5.md`.
