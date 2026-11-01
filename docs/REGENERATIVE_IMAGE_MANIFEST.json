@@ -1,0 +1,172 @@
+[
+  {
+    "selection_number": 29,
+    "file": "assets/images/regenerative-agriculture/regenerative-aerial-garden.webp",
+    "original_filename": "5bbe37da61b73a4092e29c6349f7892d.jpeg",
+    "source_dimensions": [
+      2048,
+      1152
+    ],
+    "web_dimensions": [
+      1920,
+      1080
+    ],
+    "alt": "Elevated photograph of cultivated garden plots and surrounding vegetation",
+    "label": "THE GROWING LANDSCAPE",
+    "caption": "Cultivated garden plots viewed from above",
+    "web_size_kb": 806
+  },
+  {
+    "selection_number": 25,
+    "file": "assets/images/regenerative-agriculture/regenerative-fieldwork.webp",
+    "original_filename": "5224eb337f73f7d1409ad9c639164549.jpeg",
+    "source_dimensions": [
+      1080,
+      1440
+    ],
+    "web_dimensions": [
+      1080,
+      1440
+    ],
+    "alt": "People working among planting beds and young crops",
+    "label": "FIELDWORK",
+    "caption": "Preparing and tending planting areas",
+    "web_size_kb": 378
+  },
+  {
+    "selection_number": 7,
+    "file": "assets/images/regenerative-agriculture/regenerative-gourds.webp",
+    "original_filename": "19cd1cafebf1161b0bf08509c1fb7abd.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "Green elongated gourds growing from a trellis",
+    "label": "GROWING PRODUCE",
+    "caption": "Vegetables growing on a trellis",
+    "web_size_kb": 316
+  },
+  {
+    "selection_number": 30,
+    "file": "assets/images/regenerative-agriculture/regenerative-growing-crops.webp",
+    "original_filename": "604c039f70d2d9c1d42639245aff30c3.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "Young crops growing in mulched soil",
+    "label": "CROPS AND SOIL",
+    "caption": "Young plants growing in mulched beds",
+    "web_size_kb": 496
+  },
+  {
+    "selection_number": 17,
+    "file": "assets/images/regenerative-agriculture/regenerative-garden-plots.webp",
+    "original_filename": "3e9e61348ada0c0cc19f3c8b4d94466c.jpeg",
+    "source_dimensions": [
+      2048,
+      1152
+    ],
+    "web_dimensions": [
+      1920,
+      1080
+    ],
+    "alt": "Aerial view across planted garden plots and surrounding green fields",
+    "label": "GARDEN PLOTS",
+    "caption": "Garden plots and field activity",
+    "web_size_kb": 828
+  },
+  {
+    "selection_number": 31,
+    "file": "assets/images/regenerative-agriculture/regenerative-trellis-work.webp",
+    "original_filename": "6804205a47e1927040757394a283bc4f.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "People working with bamboo trellis materials in a field",
+    "label": "SUPPORT STRUCTURES",
+    "caption": "Hands-on work with a field trellis",
+    "web_size_kb": 532
+  },
+  {
+    "selection_number": 23,
+    "file": "assets/images/regenerative-agriculture/regenerative-mulched-crops.webp",
+    "original_filename": "4f3ad298beedbc27cbc00e4bdecf38f9.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "Young crops planted in soil with plant-based mulch",
+    "label": "PLANT GROWTH",
+    "caption": "Young crops in planted beds",
+    "web_size_kb": 457
+  },
+  {
+    "selection_number": 48,
+    "file": "assets/images/regenerative-agriculture/regenerative-farm-animals.webp",
+    "original_filename": "c3f13e07592894b6a95001c58c6acd3d.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "Farm animals grazing in a cultivated landscape",
+    "label": "FARM ANIMALS",
+    "caption": "Animals pictured in the farm landscape",
+    "web_size_kb": 745
+  },
+  {
+    "selection_number": 53,
+    "file": "assets/images/regenerative-agriculture/regenerative-plant-care.webp",
+    "original_filename": "d5f71ad8345a2464f2a05d6e4aa1add5.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "Young plant supported by a wooden stake amid mixed greenery",
+    "label": "PLANT CARE",
+    "caption": "Young plant and its supporting stake",
+    "web_size_kb": 558
+  },
+  {
+    "selection_number": 54,
+    "file": "assets/images/regenerative-agriculture/regenerative-planting-preparation.webp",
+    "original_filename": "d9f9e6a35faf49021e8aee067b295181.jpeg",
+    "source_dimensions": [
+      1536,
+      2048
+    ],
+    "web_dimensions": [
+      1440,
+      1920
+    ],
+    "alt": "A person working near planting materials and garden tools",
+    "label": "PLANTING PREPARATION",
+    "caption": "Hands-on work beside planting materials",
+    "web_size_kb": 698
+  }
+]

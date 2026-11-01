@@ -1449,3 +1449,21 @@
   .expectation-points li { font-size: 15px; }
   .expectation-basics p { font-size: 14px; }
 }
+
+/* Client V4 update: render visible booking Hero photography. */
+.booking-hero { position: relative; overflow: hidden; isolation: isolate; }
+.booking-hero-photo {
+  position: absolute; inset: 0; z-index: 0;
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  pointer-events: none;
+}
+.booking-hero::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(3,24,20,.84), rgba(3,24,20,.65) 62%, rgba(3,24,20,.50)),
+    radial-gradient(circle at 84% 12%, rgba(75,163,162,.14), transparent 27%);
+  pointer-events: none;
+}
+.booking-hero-grid { position: relative; z-index: 2; }
+@media print { .booking-hero-photo, .booking-hero::before { display:none !important; } }

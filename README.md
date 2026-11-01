@@ -1,3 +1,26 @@
+# Kingfisher Park — Version 6
+
+**Photography & Regenerative Agriculture integration**
+
+This build is based on the latest revised V4 Sitewide Readability source, including the firefly and Pagatpat instructions and repaired subpage Hero imagery. The user-approved visual direction from V4 was retained; this package is designated **Version 6** to distinguish it from the older reverted Version 5.
+
+Open `index.html` with Live Server or run a local HTTP server from the project folder. Navigation is relative, and all new agriculture images are local WebP assets.
+
+### New in Version 6
+- New four-image regenerative-agriculture feature in `the-park.html`.
+- New six-image regenerative-agriculture photo essay in `stories.html`.
+- Two-way navigation between the new features.
+- Responsive CSS for desktop, tablet and mobile; no change to HOME structure.
+- Ten optimized original-source photographs, with manifest and factual alt text.
+
+**Content sign-off:** Please verify publication permissions, photo credits, dates and details with the client before the production website goes live. The source ZIP contains 65 photos + one video; only ten selected, optimized images are included here.
+
+See `docs/CLIENT_REVISION_V6.md` and `docs/REGENERATIVE_IMAGE_MANIFEST.json` for detailed changes and original-filename mapping.
+
+---
+
+## Archived development notes (earlier milestones)
+
 # Kingfisher Park — Homepage V1
 
 ## Client Revision V3 — Living Light autoplay
