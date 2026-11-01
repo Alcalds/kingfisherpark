@@ -1,3 +1,58 @@
+# START HERE — KINGFISHER PARK VERSION 7
+
+**This is a complete HTML/CSS/JavaScript design prototype, not a Wix Studio export or an edited live Wix site.** Extract the entire folder and open with VS Code Live Server (or another local HTTP server). Open `index.html` to browse all pages.
+
+Version 7 revises **seven non-HOME pages** while preserving the audited V6 HOME HTML without any modifications. **Version 6 and the approved V4 visual language remain the foundation.**
+
+## Main changes
+- **Biodiversity**: Interactive category-based wildlife photo carousel with left and right buttons, swipe and keyboard controls; ALL PHOTOS / BIRDLIFE / FLORA categories. Existing 5 bird photographs and one flora photograph; no invented species names.
+- **The Park**: Editorial community photo composition, resolved public-facing internal editorial note, concise linked historical feature; existing four-photo regenerative agriculture mosaic preserved.
+- **Experiences**: Alternating full-width photographic experience detail panels and a separate firefly-visit preparation feature instead of another repeated night-photo collage.
+- **Stories & History**: Archive timeline, concise cross-linked community feature, and featured agriculture photo-essay layout (six existing agricultural photos preserved).
+- **Plan Your Visit**: Three-stage visual timeline plus photographic scenery and inquiry guidance; no unverified facility/meeting-point claims.
+- **Visitor Guide**: Three interactive responsible-visiting accordions. The visible Pagatpat area uses **local labeled mangrove habitat context** plus a link to the external, identified Pagatpat photograph; an authentic park Pagatpat photo is still required.
+- **Booking**: Photographic thumbnails for the four choices; the original eight-stage JavaScript booking flow remains byte-identical and must continue to display demo/no-payment disclaimers.
+
+## Where to find the newly designed sections
+- `biodiversity.html#biodiversity` — wildlife gallery with tabs and arrows.
+- `the-park.html#community`, `the-park.html#park-history` — editorial images and history teaser.
+- `experiences.html#experiences`, `experiences.html#night-preparation` — full-width experience rows and visitor guidance.
+- `stories.html#stories`, `stories.html#regenerative-agriculture` — timeline and agriculture photo essay.
+- `plan-your-visit.html#first-visit` — visual time-of-day timeline.
+- `visitor-guide.html` — responsible-visiting accordions.
+- `booking.html` — unchanged steps and calculations, new option thumbnails.
+
+## Wix Studio feasibility (read before implementing)
+- See **`docs/V7_WIX_STUDIO_IMPLEMENTATION_GUIDE.md`** for each page's native Wix Studio equivalents.
+- For Biodiversity, **Wix Pro Gallery** supports Slider/Slideshow and prev/next navigation arrows, and **Slideshow Repeater** has built-in arrows. Do NOT assume ordinary Slider Repeaters have built-in arrow buttons. Use native Tabs with category galleries, or custom Velo only when required.
+- Wix Studio requires rebuilding these prototype structures in the editor. Copying these HTML/CSS files into Wix Studio does **not** automatically recreate native Wix elements or CMS collections.
+
+## Client photo request
+- See `docs/V7_CLIENT_PHOTO_REQUEST.md`. Highest priorities: more non-bird wildlife/flora, authentic Pagatpat, actual tour participants, entrance and visitor facilities, and dated conservation/community photos.
+
+## Final checks before using in production
+- The booking is **not a real reservation/payment system**. Do not remove demo disclosures until integrated and approved.
+- Rates, opening hours, species identification, photography consent, and policies require client verification.
+- HOME's deferred live-phone Lightline and landscape viewport issues are intentionally untouched.
+
+---
+
+# Archived Version 6 baseline and earlier project notes
+
+# START HERE — VERSION 6 FINAL SOURCE-QA REVISION
+
+This is a complete **HTML/CSS/JavaScript prototype**, not the live Wix Studio site. Extract this entire folder before opening; for best results use **VS Code Live Server** or an equivalent local HTTP server, rather than previewing isolated HTML files inside the ZIP.
+
+**Where are the new photos?** Open **The Park**, then click **SEE REGENERATIVE AGRICULTURE ↘** (4 photos); open **Stories & History**, then click **VIEW AGRICULTURE PHOTO STORY ↘** (6 photos). See `docs/WHERE_THE_PHOTOS_ARE.md`.
+
+**Hero photos:** all eight pages reference local Hero images, verified by automated render and path checks; CSS-local fallback photos added. See `docs/FINAL_SOURCE_QA_2026-11-02.md`, with screenshot evidence under `docs/QA_VISUAL_REFERENCES/`.
+
+**OPEN GUIDE:** `visitor-guide.html`, with a local mangrove aerial and an externally hosted, credited Pagatpat reference (local generic mangrove fallback); external photo not guaranteed offline. Do not confuse these with the agriculture collection.
+
+**Important:** Booking still simulates reservations/payments; it is not a live checkout. Staff must approve photos, prices/policies and verify the published site before launch.
+
+---
+
 # Kingfisher Park — Version 6
 
 **Photography & Regenerative Agriculture integration**

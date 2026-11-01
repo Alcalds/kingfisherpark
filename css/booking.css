@@ -1467,3 +1467,15 @@
 }
 .booking-hero-grid { position: relative; z-index: 2; }
 @media print { .booking-hero-photo, .booking-hero::before { display:none !important; } }
+
+/* V6 final QA: a local image fallback for the booking Hero. */
+.booking-hero { background-image: url("../assets/images/night/night-boardwalk.webp"); background-size: cover; background-position: center; }
+/* V7 — contextual photography in the existing eight-step demo; no workflow logic changed */
+.kp-v7-booking .booking-option {grid-template-columns:30px 83px minmax(0,1fr) auto;gap:13px;}
+.kp-v7-booking .v7-booking-option-photo {width:83px;height:76px;display:block;border-radius:11px;overflow:hidden;background:#102e25;}
+.kp-v7-booking .v7-booking-option-photo img {width:100%;height:100%;display:block;object-fit:cover;}
+@media(max-width:760px){ .kp-v7-booking .booking-option {grid-template-columns:27px 62px minmax(0,1fr);gap:9px;}
+.kp-v7-booking .v7-booking-option-photo {width:62px;height:66px;}
+.kp-v7-booking .booking-option .option-price {grid-column:3;justify-self:start;}
+}
+@media(max-width:385px){.kp-v7-booking .booking-option {grid-template-columns:25px 54px minmax(0,1fr);padding-inline:12px;}.kp-v7-booking .v7-booking-option-photo {width:54px;height:62px;}}

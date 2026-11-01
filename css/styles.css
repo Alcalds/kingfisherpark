@@ -4603,7 +4603,7 @@ body {
 .regenerative-mosaic {
   display: grid;
   grid-template-columns: 1.08fr .8fr .8fr;
-  grid-template-rows: repeat(2, minmax(235px, 1fr));
+  grid-template-rows: repeat(2, clamp(260px, 24vw, 340px));
   gap: 16px;
   min-height: 570px;
 }
@@ -4754,3 +4754,195 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .regenerative-photo img, .regenerative-story-media img { transition: none; }
 }
+
+
+/* ============================================================
+   V6 FINAL QA — VERIFIED LOCAL HERO FALLBACKS AND PHOTO ESSAY LINKS
+   Resilient to differing browser HTML image-loading behavior.
+   Each CSS URL is relative to the css/ directory. HTML img tags
+   remain the primary full-resolution visible images.
+   ============================================================ */
+.subpage-hero-park { background-image: url("../assets/images/landscape/park-panorama.webp"); background-position: center; background-size: cover; }
+.subpage-hero-experiences { background-image: url("../assets/images/night/night-boardwalk.webp"); background-position: center; background-size: cover; }
+.subpage-hero-biodiversity { background-image: url("../assets/images/biodiversity/birdlife-01.webp"); background-position: center 35%; background-size: cover; }
+.subpage-hero-stories { background-image: url("../assets/images/community/local-craft-2026.webp"); background-position: center 45%; background-size: cover; }
+.subpage-hero-plan { background-image: url("../assets/images/night/night-boardwalk.webp"); background-position: center; background-size: cover; }
+.guide-hero { background-image: url("../assets/images/hero/mangrove-aerial.webp"); background-position: center 42%; background-size: cover; }
+.subpage-hero-jump {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-top: 26px; padding-bottom: 8px;
+  border-bottom: 1px solid rgba(223,242,145,.65);
+  color: #dff291; font: 800 12px/1.55 var(--font-body);
+  letter-spacing: .11em; text-decoration: none;
+}
+.subpage-hero-jump:hover, .subpage-hero-jump:focus-visible { color:#fff; border-color:#fff; }
+@media(max-width:520px) {.subpage-hero-jump {font-size:11px;letter-spacing:.07em;margin-top:19px;}}
+/* ===============================================================
+   KINGFISHER PARK — V7 SUBPAGE DESIGN SYSTEM
+   Wix Studio implementation: native Pro Gallery, native cards/grid,
+   native Accordion, native Slideshow Repeater where indicated.
+   Every selector is scoped to .kp-v7 PAGE classes. HOME untouched.
+   =============================================================== */
+.kp-v7 [hidden] { display: none !important; }
+.kp-v7 .v7-eyebrow { color: #b5d8b0; font-weight: 850; font-size: 12px; letter-spacing: .15em; }
+
+/* BIODIVERSITY — user-driven horizontal photo explorer */
+.kp-v7-biodiversity .v7-wildlife-explorer { margin-top: 44px; }
+.kp-v7-biodiversity .v7-wildlife-header { display:flex;justify-content:space-between;align-items:end;gap:35px;flex-wrap:wrap;margin-bottom:28px; }
+.kp-v7-biodiversity .v7-wildlife-header p { color:rgba(255,255,255,.85);font-family:Georgia,serif;font-size:clamp(22px,2.4vw,36px);line-height:1.15;max-width:390px;margin:12px 0 0; }
+.kp-v7-biodiversity .v7-wildlife-tabs { display:flex;flex-wrap:wrap;gap:8px; }
+.kp-v7-biodiversity .v7-wildlife-tabs button { appearance:none;cursor:pointer;border:1px solid rgba(255,255,255,.26);border-radius:999px;color:#d3e1d8;background:transparent;padding:12px 17px;font:800 12px/1.3 Inter,system-ui,sans-serif;letter-spacing:.09em; }
+.kp-v7-biodiversity .v7-wildlife-tabs small {margin-left:7px;color:#a9cbb2;font-size:11px;}
+.kp-v7-biodiversity .v7-wildlife-tabs button[aria-selected="true"] { background:#eaf2bf;border-color:#eaf2bf;color:#092a1d; }
+.kp-v7-biodiversity .v7-wildlife-tabs button[aria-selected="true"] small { color:#58714b; }
+.kp-v7-biodiversity .v7-wildlife-track {display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:1px;overscroll-behavior-x:contain;padding:4px 2px 12px;scrollbar-width:thin;scrollbar-color:#8bac85 transparent;}
+.kp-v7-biodiversity .v7-wildlife-card {position:relative;flex:0 0 clamp(265px,31vw,410px);aspect-ratio:4/5;max-height:495px;margin:0;overflow:hidden;scroll-snap-align:start;border-radius:22px;background:#173a2e;}
+.kp-v7-biodiversity .v7-wildlife-card img {width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+.kp-v7-biodiversity .v7-wildlife-card:hover img {transform:scale(1.025);}
+.kp-v7-biodiversity .v7-wildlife-card::after {content:"";position:absolute;inset:40% 0 0;background:linear-gradient(0deg,rgba(3,18,13,.88),transparent);pointer-events:none;}
+.kp-v7-biodiversity .v7-wildlife-card figcaption {position:absolute;z-index:1;inset:auto 20px 20px;display:grid;gap:6px;}
+.kp-v7-biodiversity .v7-wildlife-card figcaption span {color:white;font-weight:850;font-size:13px;letter-spacing:.15em;}
+.kp-v7-biodiversity .v7-wildlife-card figcaption small {color:rgba(255,255,255,.72);font-size:12px;}
+.kp-v7-biodiversity .v7-wildlife-toolbar {display:flex;justify-content:space-between;align-items:center;gap:16px;margin:15px 0 0;}
+.kp-v7-biodiversity .v7-wildlife-status {font-size:13px;color:#b5c9bc;}
+.kp-v7-biodiversity .v7-wildlife-controls {display:flex;gap:10px;}
+.kp-v7-biodiversity .v7-wildlife-controls button {width:54px;height:54px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.40);border-radius:50%;background:transparent;color:white;font-size:25px;cursor:pointer;transition:background .2s ease;}
+.kp-v7-biodiversity .v7-wildlife-controls button:not(:disabled):hover {background:#eaf2bf;color:#0a2e22;}
+.kp-v7-biodiversity .v7-wildlife-controls button:disabled {opacity:.3;cursor:default;}
+.kp-v7-biodiversity .v7-wildlife-footnote {color:#afc1b6;margin:22px 0 0;font-size:13px;line-height:1.65;}
+.kp-v7-biodiversity .biodiversity-intro .bio-discovery-note {font-size:13px;color:#b5d8b0;}
+
+/* THE PARK — editorial archive instead of another three-card grid */
+.kp-v7-park .community-rule {padding-block:18px;}
+.kp-v7-park .v7-park-community-photos {position:relative;display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:repeat(2,minmax(260px,1fr));gap:16px;min-height:630px;}
+.kp-v7-park .v7-park-community-photos .community-photo {position:relative;top:auto;right:auto;bottom:auto;left:auto;width:auto;height:auto;border-radius:20px;box-shadow:none;}
+.kp-v7-park .v7-park-community-photos .community-photo-main {grid-column:1;grid-row:1/3;z-index:1;}
+.kp-v7-park .v7-park-community-photos .community-photo-top {grid-column:2;grid-row:1;}
+.kp-v7-park .v7-park-community-photos .community-photo-bottom {grid-column:2;grid-row:2;z-index:1;}
+.kp-v7-park .v7-park-history {padding:110px 0 125px;background:#fff9ef;}
+.kp-v7-park .v7-park-history-layout {display:grid;grid-template-columns:1fr .88fr;gap:clamp(40px,7vw,110px);align-items:center;}
+.kp-v7-park .v7-park-history h2 {max-width:660px;margin:18px 0 0;font:400 clamp(48px,5vw,76px)/.97 Georgia,serif;letter-spacing:-.045em;color:#0b2f24;}
+.kp-v7-park .v7-park-history p {max-width:580px;font-size:17px;line-height:1.75;color:#66716b;margin:26px 0 32px;}
+.kp-v7-park .v7-park-history figure {position:relative;margin:0;min-height:370px;overflow:hidden;border-radius:24px;}
+.kp-v7-park .v7-park-history figure img {width:100%;height:100%;min-height:370px;object-fit:cover;}
+.kp-v7-park .v7-park-history figcaption {position:absolute;bottom:18px;left:22px;color:white;background:#102b22ad;padding:10px 13px;font-size:11px;font-weight:800;letter-spacing:.12em;border-radius:7px;}
+
+/* EXPERIENCES — full-width image-and-details rows; fewer repeating image grids */
+.kp-v7-experiences .experience-grid {grid-template-columns:1fr;gap:26px;}
+.kp-v7-experiences .experience-card {grid-template-columns:minmax(0, .95fr) minmax(0, 1.05fr);min-height:370px;}
+.kp-v7-experiences .experience-card:nth-child(even) {grid-template-columns:minmax(0, 1.05fr) minmax(0, .95fr);}
+.kp-v7-experiences .experience-card:nth-child(even) .experience-media {grid-column:2;grid-row:1;}
+.kp-v7-experiences .experience-card:nth-child(even) .experience-copy {grid-column:1;grid-row:1;}
+.kp-v7-experiences .experience-copy {padding:42px 46px 38px;}
+.kp-v7-experiences .experience-copy > p:not(.condition) {font-size:16px;line-height:1.7;}
+.kp-v7-experiences .experience-topline h3 {font-size:clamp(32px,3.1vw,48px);}
+.kp-v7-experiences .after-dark-inner {grid-template-columns:minmax(0, .95fr) minmax(0, 1.05fr);gap:clamp(45px,7vw,95px);}
+.kp-v7-experiences .v7-night-preparation figure {position:relative;margin:0;overflow:hidden;border-radius:22px;height:310px;}
+.kp-v7-experiences .v7-night-preparation figure img {width:100%;height:100%;object-fit:cover;}
+.kp-v7-experiences .v7-night-preparation figure::after {content:"";position:absolute;inset:60% 0 0;background:linear-gradient(0deg,#061a18b8,transparent);}
+.kp-v7-experiences .v7-night-preparation figcaption {position:absolute;z-index:1;bottom:20px;left:23px;font-size:12px;color:white;font-weight:850;letter-spacing:.15em;}
+.kp-v7-experiences .v7-night-preparation-notes {display:grid;gap:0;}
+.kp-v7-experiences .v7-night-preparation-notes > div {padding:21px 2px;border-bottom:1px solid #ffffff32;}
+.kp-v7-experiences .v7-night-preparation-notes strong {color:#def2b2;font-size:12px;letter-spacing:.14em;}
+.kp-v7-experiences .v7-night-preparation-notes p {color:#d4e4db;margin:9px 0 0;font-size:15px;line-height:1.62;}
+
+/* STORIES — timeline and feature-led agriculture photo essay */
+.kp-v7-stories #stories .story-grid.v7-archive-timeline {display:grid;grid-template-columns:1fr;gap:0;position:relative;border-left:2px solid #b5cbb8;margin-left:10px;padding-left:48px;}
+.kp-v7-stories #stories .v7-archive-timeline .story-card {position:relative;display:grid;grid-template-columns:minmax(200px,.62fr) minmax(0,1fr);gap:25px;padding:0 0 38px;box-shadow:none;border:none;background:transparent;overflow:visible;}
+.kp-v7-stories #stories .v7-archive-timeline .story-card::before {content:"";position:absolute;left:-60px;top:27px;width:20px;height:20px;border-radius:50%;background:#087c35;border:5px solid #eaf1e5;}
+.kp-v7-stories #stories .v7-archive-timeline .story-media {height:250px;max-height:250px;border-radius:20px;overflow:hidden;}
+.kp-v7-stories #stories .v7-archive-timeline .story-copy {padding:22px 0 0;}
+.kp-v7-stories #stories .v7-archive-timeline .story-card-current {grid-column:auto;grid-row:auto;}
+.kp-v7-stories .v7-stories-community {padding:100px 0;background:#0a2b22;color:#fff;}
+.kp-v7-stories .v7-community-teaser {display:grid;grid-template-columns:.9fr 1fr;gap:clamp(40px,8vw,125px);align-items:center;}
+.kp-v7-stories .v7-community-teaser figure {margin:0;position:relative;height:430px;border-radius:24px;overflow:hidden;}
+.kp-v7-stories .v7-community-teaser img {width:100%;height:100%;object-fit:cover;}
+.kp-v7-stories .v7-community-teaser figcaption {position:absolute;bottom:19px;left:20px;color:white;background:#071f17bd;padding:10px;border-radius:6px;font-size:12px;letter-spacing:.1em;}
+.kp-v7-stories .v7-community-teaser h2 {font:400 clamp(48px,5vw,76px)/.97 Georgia,serif;letter-spacing:-.045em;margin:18px 0;}
+.kp-v7-stories .v7-community-teaser p {font-size:17px;line-height:1.7;color:#bfcdc4;margin-bottom:28px;}
+.kp-v7-stories .v7-community-teaser .text-link {color:#eaf2bf;}
+.kp-v7-stories .v7-agri-photo-essay {grid-template-columns:repeat(3,minmax(0,1fr));}
+.kp-v7-stories .v7-agri-photo-essay .regenerative-story-card:first-child {grid-column:span 2;display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch;}
+.kp-v7-stories .v7-agri-photo-essay .regenerative-story-card:first-child .regenerative-story-media {height:100%;min-height:350px;}
+.kp-v7-stories .v7-agri-photo-essay .regenerative-story-card:first-child figcaption {align-self:center;}
+
+/* PLAN YOUR VISIT — visual journey with accurate source photos */
+.kp-v7-plan .first-visit-timeline li {grid-template-columns:45px minmax(0,1fr) 138px;align-items:center;}
+.kp-v7-plan .v7-first-visit-image {width:138px;height:104px;object-fit:cover;border-radius:14px;}
+.kp-v7-plan .v7-plan-visual {padding:100px 0;background:#eff1e5;}
+.kp-v7-plan .v7-plan-visual-inner {display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(40px,7vw,100px);align-items:center;}
+.kp-v7-plan .v7-plan-visual h2 {font:400 clamp(49px,5vw,77px)/.95 Georgia,serif;letter-spacing:-.04em;margin:18px 0;color:#0b2f24;}
+.kp-v7-plan .v7-plan-visual p {font-size:16px;line-height:1.7;color:#69736b;margin-bottom:30px;}
+.kp-v7-plan .v7-plan-visual-pair {display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.kp-v7-plan .v7-plan-visual-pair figure {margin:0;position:relative;min-height:430px;border-radius:20px;overflow:hidden;}
+.kp-v7-plan .v7-plan-visual-pair img {width:100%;height:100%;object-fit:cover;}
+.kp-v7-plan .v7-plan-visual-pair figure:after {content:"";position:absolute;inset:60% 0 0;background:linear-gradient(0deg,#062018ac,transparent);}
+.kp-v7-plan .v7-plan-visual-pair figcaption {position:absolute;z-index:1;bottom:17px;left:15px;color:white;font-weight:850;font-size:12px;letter-spacing:.11em;}
+
+/* VISITOR GUIDE — native Wix Accordion equivalent */
+.kp-v7-guide .v7-guide-accordions {display:grid;gap:12px;width:100%;min-width:0;}
+.kp-v7-guide .v7-guide-accordions details {border:1px solid #ffffff35;border-radius:14px;overflow:hidden;background:#ffffff0d;}
+.kp-v7-guide .v7-guide-accordions summary {list-style:none;cursor:pointer;color:white;font-weight:800;font-size:16px;line-height:1.4;padding:20px;display:flex;justify-content:space-between;gap:20px;}
+.kp-v7-guide .v7-guide-accordions summary::-webkit-details-marker {display:none;}
+.kp-v7-guide .v7-guide-accordions summary span {color:#cdeb9c;font-size:21px;}
+.kp-v7-guide .v7-guide-accordions details[open] summary span {transform:rotate(45deg);}
+.kp-v7-guide .v7-accordion-copy {border-top:1px solid #ffffff24;padding:10px 21px 20px;color:#d4e2d8;}
+.kp-v7-guide .v7-accordion-copy p {font-size:15px;line-height:1.75;margin:12px 0;}
+.kp-v7-guide .v7-accordion-copy strong {color:#e1f3c5;}
+@media print { .kp-v7-guide .v7-guide-accordions details .v7-accordion-copy {display:block !important;} }
+
+@media (max-width:1050px) {
+ .kp-v7-park .v7-park-community-photos {min-height:550px;grid-template-rows:repeat(2,minmax(240px,1fr));}
+ .kp-v7-experiences .experience-card {min-height:345px;}
+ .kp-v7-experiences .experience-copy {padding:30px;}
+ .kp-v7-experiences .after-dark-inner {grid-template-columns:1fr;}
+ .kp-v7-plan .v7-plan-visual-inner {grid-template-columns:1fr;}
+ .kp-v7-stories .v7-agri-photo-essay {grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:750px) {
+ .kp-v7-biodiversity .v7-wildlife-card {flex-basis:min(82vw,340px);aspect-ratio:4/5;}
+ .kp-v7-biodiversity .v7-wildlife-header {align-items:start;}
+ .kp-v7-biodiversity .v7-wildlife-tabs {gap:6px;}
+ .kp-v7-biodiversity .v7-wildlife-tabs button {padding:11px 12px;font-size:10px;}
+ .kp-v7-biodiversity .v7-wildlife-controls button {width:46px;height:46px;}
+ .kp-v7-park .v7-park-community-photos {grid-template-columns:1fr 1fr;grid-template-rows:340px 180px;min-height:0;gap:10px;}
+ .kp-v7-park .v7-park-community-photos .community-photo-main {grid-column:1/3;grid-row:1;}
+ .kp-v7-park .v7-park-community-photos .community-photo-top {grid-column:1;grid-row:2;}
+ .kp-v7-park .v7-park-community-photos .community-photo-bottom {grid-column:2;grid-row:2;}
+ .kp-v7-park .v7-park-history {padding:75px 0;}
+ .kp-v7-park .v7-park-history-layout {grid-template-columns:1fr;gap:30px;}
+ .kp-v7-park .v7-park-history h2 {font-size:48px;}
+ .kp-v7-experiences .experience-card,.kp-v7-experiences .experience-card:nth-child(even) {display:flex;flex-direction:column;min-height:0;}
+ .kp-v7-experiences .experience-card .experience-media,.kp-v7-experiences .experience-card:nth-child(even) .experience-media {min-height:265px;height:265px;grid-column:auto;grid-row:auto;}
+ .kp-v7-experiences .experience-card .experience-copy,.kp-v7-experiences .experience-card:nth-child(even) .experience-copy {grid-column:auto;grid-row:auto;}
+ .kp-v7-experiences .experience-copy {padding:28px 24px;}
+ .kp-v7-experiences .experience-topline {grid-template-columns:1fr;gap:8px;}
+ .kp-v7-experiences .experience-topline .price span {display:inline;}
+ .kp-v7-experiences .v7-night-preparation figure {height:260px;}
+ .kp-v7-stories #stories .story-grid.v7-archive-timeline {padding-left:25px;margin-left:6px;}
+ .kp-v7-stories #stories .v7-archive-timeline .story-card {grid-template-columns:1fr;gap:0;}
+ .kp-v7-stories #stories .v7-archive-timeline .story-card::before {left:-37px;width:15px;height:15px;top:12px;}
+ .kp-v7-stories #stories .v7-archive-timeline .story-media {height:240px;}
+ .kp-v7-stories .v7-stories-community {padding:70px 0;}
+ .kp-v7-stories .v7-community-teaser {grid-template-columns:1fr;gap:28px;}
+ .kp-v7-stories .v7-community-teaser figure {height:275px;}
+ .kp-v7-stories .v7-community-teaser h2 {font-size:48px;}
+ .kp-v7-stories .v7-agri-photo-essay {grid-template-columns:1fr;}
+ .kp-v7-stories .v7-agri-photo-essay .regenerative-story-card:first-child {grid-column:auto;display:block;}
+ .kp-v7-stories .v7-agri-photo-essay .regenerative-story-card:first-child .regenerative-story-media {height:280px;min-height:0;}
+ .kp-v7-plan .first-visit-timeline li {grid-template-columns:38px 1fr;gap:14px;}
+ .kp-v7-plan .v7-first-visit-image {grid-column:2;grid-row:auto;width:100%;height:135px;}
+ .kp-v7-plan .v7-plan-visual {padding:72px 0;}
+ .kp-v7-plan .v7-plan-visual h2 {font-size:47px;}
+ .kp-v7-plan .v7-plan-visual-pair {gap:9px;}
+ .kp-v7-plan .v7-plan-visual-pair figure {min-height:230px;}
+ .kp-v7-plan .v7-plan-visual-pair figcaption {font-size:10px;}
+}
+@media (prefers-reduced-motion:reduce){ .kp-v7-biodiversity .v7-wildlife-card img {transition:none;} }
+
+/* V7: keep active header navigation legible on the ivory floating shell. */
+.kp-v7 .desktop-nav a[aria-current="page"] {color:#0b2f24;text-decoration:underline;text-underline-offset:7px;text-decoration-color:#9bbd89;}
+/* V7 wildlife navigation: clearly separated previous (left) and next (right) buttons. */
+.kp-v7-biodiversity .v7-wildlife-toolbar {position:relative;min-height:54px;justify-content:center;padding-inline:65px;}
+.kp-v7-biodiversity .v7-wildlife-controls {position:absolute;inset:0;justify-content:space-between;pointer-events:none;}
+.kp-v7-biodiversity .v7-wildlife-controls button {pointer-events:auto;}

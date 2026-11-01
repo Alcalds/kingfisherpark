@@ -96,6 +96,59 @@
     button.addEventListener('click', () => window.print());
   });
 
+  // V7 Biodiversity photo explorer — no third-party library, keyboard and swipe supported.
+  // Wix Studio equivalent: three Pro Galleries within native Tabs; use Pro Gallery's native arrows.
+  document.querySelectorAll('[data-wildlife-explorer]').forEach((explorer) => {
+    const tabs = [...explorer.querySelectorAll('[role="tab"]')];
+    const panels = [...explorer.querySelectorAll('.v7-wildlife-panel')];
+    const visiblePanel = () => panels.find((panel) => !panel.hidden);
+    const updateButtons = (panel) => {
+      const track = panel?.querySelector('.v7-wildlife-track');
+      if (!track) return;
+      const cards = [...track.querySelectorAll('.v7-wildlife-card')];
+      const left = track.scrollLeft;
+      let index = 0;
+      cards.forEach((card, i) => { if (card.offsetLeft - cards[0].offsetLeft <= left + 12) index = i; });
+      const end = track.scrollWidth - track.clientWidth;
+      const prev = panel.querySelector('[data-gallery-prev]');
+      const next = panel.querySelector('[data-gallery-next]');
+      prev.disabled = left < 8;
+      next.disabled = cards.length < 2 || end - left < 8;
+      panel.querySelector('.v7-wildlife-status').textContent = `${Math.min(index + 1, cards.length)} of ${cards.length} photos`;
+    };
+    const activate = (tab) => {
+      tabs.forEach((t) => {const selected=t===tab;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;});
+      panels.forEach((panel) => {panel.hidden=panel.id!==tab.getAttribute('aria-controls');});
+      const panel=visiblePanel();const track=panel.querySelector('.v7-wildlife-track');track.scrollLeft=0;
+      updateButtons(panel);
+    };
+    tabs.forEach((tab,i) => {
+      tab.addEventListener('click', () => activate(tab));
+      tab.addEventListener('keydown', (e) => {
+        if (!['ArrowRight','ArrowLeft','Home','End'].includes(e.key)) return;
+        e.preventDefault();
+        const n=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+        tabs[n].focus();activate(tabs[n]);
+      });
+    });
+    panels.forEach((panel) => {
+      const track=panel.querySelector('.v7-wildlife-track');
+      const move = (dir) => {
+        const first=track.querySelector('.v7-wildlife-card'); if(!first)return;
+        const gap=parseFloat(getComputedStyle(track).gap)||0;
+        const distance=first.getBoundingClientRect().width+gap;
+        track.scrollBy({left:dir*distance,behavior:reduceMotion.matches?'instant':'smooth'});
+        window.setTimeout(()=>updateButtons(panel),350);
+      };
+      panel.querySelector('[data-gallery-prev]').addEventListener('click',()=>move(-1));
+      panel.querySelector('[data-gallery-next]').addEventListener('click',()=>move(1));
+      track.addEventListener('scroll',()=>updateButtons(panel),{passive:true});
+      track.addEventListener('keydown',(e)=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?1:-1);}});
+    });
+    activate(tabs[0]);
+    window.addEventListener('resize',()=>updateButtons(visiblePanel()),{passive:true});
+  });
+
   if (!hero || !range) return;
 
   const stateCopy = {

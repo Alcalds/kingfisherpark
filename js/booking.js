@@ -55,7 +55,7 @@
       intro: 'Combine the park’s three current visitor activities in one visit.',
       points: [
         'Includes the park’s current daytime and after-dark experience set.',
-        'Exact sequence and timing are confirmed through the live booking system.',
+        'Activity timing depends on availability and conditions.',
         'All responsible-viewing and guide instructions apply throughout the visit.'
       ]
     }
