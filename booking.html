@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#0b2f24" name="theme-color"/>
-<meta content="Interactive Kingfisher Park booking prototype for visitor experiences in Coron, Palawan. No real payment is processed." name="description"/>
-<title>Book Kingfisher Park — Responsive Interactive Prototype</title>
-<link href="css/styles.css" rel="stylesheet"/>
-<link href="css/booking.css" rel="stylesheet"/>
-</head>
-<body class="booking-page kp-v7 kp-v7-booking">
-<a class="skip-link" href="#booking-main">Skip to booking</a>
-<header class="site-header booking-header" id="site-header">
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#0b2f24"/><meta name="description" content="Kingfisher Park Nature Trail tour rates and group estimate. Contact staff to confirm schedules and reservations."/><title>Tour Rates &amp; Reservations — Kingfisher Park</title><link href="css/styles.css" rel="stylesheet"/><link href="css/client-tour-v8.css" rel="stylesheet"/></head><body class="kp-v8 kp-v7 kp-v8 kp-v8-booking"><a class="skip-link" href="#main-content">Skip to booking</a><header class="site-header booking-header" id="site-header">
 <div class="header-shell">
 <a aria-label="Kingfisher Park home" class="brand" href="index.html">
 <img alt="" class="brand-logo" height="512" src="assets/logo/kingfisher-park-logo-512.webp" width="512"/>
@@ -29,7 +15,7 @@
 <a href="plan-your-visit.html">PLAN YOUR VISIT</a>
 </nav>
 <a aria-current="page" class="header-book header-book-active" href="booking.html">
-<span>BOOKING</span>
+<span>BOOK NOW</span>
 <span aria-hidden="true">●</span>
 </a>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" type="button">
@@ -46,385 +32,57 @@
 <a aria-current="page" class="mobile-book" href="booking.html">BOOKING <span aria-hidden="true">●</span></a>
 </nav>
 </div>
-</header>
-<main id="booking-main">
-<section aria-labelledby="booking-page-title" class="booking-hero">
-<img alt="" aria-hidden="true" class="booking-hero-photo" decoding="async" fetchpriority="high" height="898" loading="eager" src="assets/images/night/night-boardwalk.webp" width="1600"/>
-<div class="page-width booking-hero-grid">
+</header><main id="main-content"><section class="v8-tour-hero v8-booking-hero"><img src="assets/images/night/night-boardwalk.webp" alt="" aria-hidden="true"/><div class="page-width v8-tour-hero-inner"><span class="section-kicker section-kicker-light">BOOK KINGFISHER PARK</span><h1>Choose your trail. Plan your visit.</h1><p>Tour A and Tour B have group-based rates. See your estimated total, then coordinate availability and payment with Kingfisher Park.</p></div></section>
+<section class="v8-booking-workspace"><div class="page-width v8-booking-grid"><div class="v8-quote-box"><span class="section-kicker">GROUP RATE ESTIMATE</span><h2>Build your tour estimate.</h2><p>This is a price estimate only. <strong>No date is reserved and no payment is taken here.</strong> Confirm your preferred schedule through Kingfisher Park's official booking channel.</p><form id="kp-tour-calculator" class="v8-calculator" novalidate><fieldset><legend>Tour package</legend><div class="v8-tour-choices"><label><input name="tour" type="radio" value="A" checked/><span><strong>Tour A</strong><small>Full-day nature trail · Meals included</small></span></label><label><input name="tour" type="radio" value="B"/><span><strong>Tour B</strong><small>Tour A + mangroves, sunset and fireflies · Meals included</small></span></label></div></fieldset><div class="v8-input-grid"><label>Paying adults <small>(determines rate tier)</small><select name="adults" id="v8-adults"><option value="1" >1</option><option value="2" selected>2</option><option value="3" >3</option><option value="4" >4</option><option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option><option value="9" >9</option><option value="10" >10</option></select></label><label>Children aged 4–12 <small>(50% of adult rate)</small><input type="number" name="children" id="v8-children" value="0" min="0" max="99" inputmode="numeric"/></label><label>Children aged 3 and below <small>(free, no meal)</small><input type="number" name="toddlers" id="v8-toddlers" value="0" min="0" max="99" inputmode="numeric"/></label><label>Preferred visit date <small>(optional; request only)</small><input type="date" name="date" id="v8-date"/></label></div><label class="v8-checkbox"><input id="v8-early-riser" name="early" type="checkbox"/><span>Ask about the Early Riser option (+₱150 per head, or +₱300 for solo). <strong>The add-on is not included in the estimate until the park confirms the applicable headcount.</strong></span></label></form><div class="v8-rate-notes" aria-label="Tour pricing and visitor conditions"><p><strong>Included:</strong> Tour A and Tour B include meals. <strong>Transport to the park is not included.</strong> Contact Kingfisher Park to arrange transport.</p><p><strong>Children aged 3 and below:</strong> free, without a meal. <strong>Children aged 4–12:</strong> 50% of the adult per-person rate based on the number of paying adults. Children do not count toward the adult group-size tier.</p><p><strong>Early Riser:</strong> add ₱150 per head, or ₱300 for solo. This supplement requires confirmation of the eligible participants and final schedule.</p><p><strong>Scheduling:</strong> the nature trail is a full-day experience tailored to group pace. Start early to avoid the heat; confirm the day and meeting time with park staff. Weather, tides and operational conditions affect activities.</p></div><div class="v8-actions"><button type="button" id="v8-copy-summary" class="button button-primary">COPY INQUIRY SUMMARY ↗</button><a class="v8-outline-link" href="https://web.facebook.com/KingfisherPark" rel="noopener noreferrer" target="_blank">OPEN FACEBOOK / MESSENGER ↗</a></div><p id="v8-copy-status" class="v8-copy-status" role="status" aria-live="polite"></p></div>
+<aside class="v8-quote-summary" aria-live="polite"><span class="v8-summary-label">YOUR GROUP ESTIMATE</span><h2 id="v8-summary-tour">Tour A</h2><dl><div><dt>Paying adults</dt><dd id="v8-summary-adults">2</dd></div><div><dt>Rate per adult</dt><dd id="v8-summary-rate">—</dd></div><div><dt>Adult subtotal</dt><dd id="v8-summary-adult-total">—</dd></div><div><dt>Children aged 4–12</dt><dd id="v8-summary-child-total">—</dd></div><div><dt>Children 3 and below</dt><dd>Free · No meal</dd></div><div><dt>Early Riser</dt><dd id="v8-summary-early">Not selected</dd></div></dl><div class="v8-estimated-total"><span>Base tour estimate</span><strong id="v8-summary-total">—</strong></div><p>Transport, Early Riser and any special arrangements are not included in this base estimate. Staff confirmation is required.</p><div class="v8-status-note">REQUEST / ESTIMATE ONLY · NOT A CONFIRMED BOOKING</div></aside></div></section>
+<section class="v8-pricing-section"><div class="page-width"><span class="section-kicker">CLIENT-PROVIDED TOUR PRICING</span><h2>Rates by number of paying adults.</h2><div class="v8-rates-overflow"><table class="v8-rates"><caption>Rates per paying adult, by number of paying adults in the group</caption><thead><tr><th scope="col">Paying adults</th><th scope="col">Tour A / person</th><th scope="col">Tour B / person</th></tr></thead><tbody><tr><th scope="row">10</th><td>₱2,200</td><td>₱3,200</td></tr><tr><th scope="row">9</th><td>₱2,300</td><td>₱3,300</td></tr><tr><th scope="row">8</th><td>₱2,400</td><td>₱3,400</td></tr><tr><th scope="row">7</th><td>₱2,500</td><td>₱3,500</td></tr><tr><th scope="row">6</th><td>₱2,600</td><td>₱3,600</td></tr><tr><th scope="row">5</th><td>₱2,700</td><td>₱3,700</td></tr><tr><th scope="row">4</th><td>₱2,800</td><td>₱3,800</td></tr><tr><th scope="row">3</th><td>₱2,900</td><td>₱3,900</td></tr><tr><th scope="row">2</th><td>₱3,000</td><td>₱4,000</td></tr><tr><th scope="row">1</th><td>₱4,500</td><td>₱5,500</td></tr></tbody></table></div><div class="v8-rate-notes" aria-label="Tour pricing and visitor conditions"><p><strong>Included:</strong> Tour A and Tour B include meals. <strong>Transport to the park is not included.</strong> Contact Kingfisher Park to arrange transport.</p><p><strong>Children aged 3 and below:</strong> free, without a meal. <strong>Children aged 4–12:</strong> 50% of the adult per-person rate based on the number of paying adults. Children do not count toward the adult group-size tier.</p><p><strong>Early Riser:</strong> add ₱150 per head, or ₱300 for solo. This supplement requires confirmation of the eligible participants and final schedule.</p><p><strong>Scheduling:</strong> the nature trail is a full-day experience tailored to group pace. Start early to avoid the heat; confirm the day and meeting time with park staff. Weather, tides and operational conditions affect activities.</p></div></div></section>
+<section class="v8-contact"><div class="page-width"><span class="section-kicker section-kicker-light">RESERVATIONS &amp; PAYMENT</span><h2>Confirm with our park team.</h2><p>Kingfisher Park currently assists visitors through Facebook Messenger. Live calendar slots, deposit selection, online payment and issued booking vouchers will be handled only when the Wix Bookings workflow is configured, approved and tested.</p><div class="v8-social"><a href="https://web.facebook.com/KingfisherPark" rel="noopener noreferrer" target="_blank" aria-label="Kingfisher Park Facebook and Messenger">FACEBOOK / MESSENGER ↗</a><a href="https://www.instagram.com/kingfisherpark.coron/" rel="noopener noreferrer" target="_blank" aria-label="Kingfisher Park Instagram">INSTAGRAM ↗</a></div><a class="button button-primary" href="nature-trail.html">READ THE NATURE TRAIL GUIDE →</a></div></section></main><footer class="site-footer">
+<div class="page-width footer-guide">
 <div>
-<span class="section-kicker section-kicker-light">INTERACTIVE BOOKING PROTOTYPE</span>
-<h1 id="booking-page-title">Plan your Kingfisher Park experience.</h1>
+<span>FREE VISITOR GUIDE</span>
+<strong>Know what to expect before you arrive.</strong>
+<p>Published tour pricing, visitor preparation, tide notes and responsible-viewing reminders in one place.</p>
 </div>
-<div class="booking-hero-note">
-<strong>DEMO ONLY</strong>
-<p>
-            This VS Code prototype calculates a booking and simulates checkout.
-            It does not create a real reservation or process a real payment.
-          </p>
+<a href="visitor-guide.html">OPEN GUIDE <span aria-hidden="true">→</span></a>
 </div>
-</div>
-</section>
-<section aria-label="Kingfisher Park booking prototype" class="booking-workspace">
-<div class="page-width booking-layout">
-<div class="booking-flow">
-<ol aria-label="Booking progress" class="booking-progress" id="booking-progress">
-<li class="is-active" data-progress-step="1"><span>1</span><small>Experience</small></li>
-<li data-progress-step="2"><span>2</span><small>What to Expect</small></li>
-<li data-progress-step="3"><span>3</span><small>Date &amp; Time</small></li>
-<li data-progress-step="4"><span>4</span><small>Guests</small></li>
-<li data-progress-step="5"><span>5</span><small>Details</small></li>
-<li data-progress-step="6"><span>6</span><small>Review</small></li>
-<li data-progress-step="7"><span>7</span><small>Demo Payment</small></li>
-<li data-progress-step="8"><span>8</span><small>Confirmed</small></li>
-</ol>
-<div aria-live="polite" class="booking-mobile-status" id="booking-mobile-status">
-<span id="booking-mobile-step">Step 1 of 8 · Experience</span>
-<strong id="booking-mobile-total">₱0</strong>
-</div>
-<div aria-live="assertive" class="booking-error" id="booking-error" role="alert"></div>
-<form id="booking-form" novalidate="">
-<!-- STEP 1 -->
-<section aria-labelledby="step-1-title" class="booking-step is-active" data-step="1">
-<div class="step-heading">
-<span>STEP 01</span>
-<h2 id="step-1-title" tabindex="-1">Choose your experience.</h2>
-<p>Current rates are shown per person.</p>
-</div>
-<fieldset class="experience-options">
-<legend class="sr-only">Choose an experience</legend>
-<label class="booking-option">
-<input name="experience" type="radio" value="mangrove"/>
-<span class="option-number">01</span><span class="v7-booking-option-photo"><img alt="Kayaking beside mangrove waterways" loading="lazy" src="assets/images/experiences/mangrove-kayak.webp"/></span>
-<span class="option-copy">
-<strong>Mangrove Kayak</strong>
-<small>Explore the park's waterways by kayak.</small>
-<em>Availability depends on low/high tide conditions and resulting water depth.</em>
-</span>
-<span class="option-price">₱600<small>/ person</small></span>
-</label>
-<label class="booking-option">
-<input name="experience" type="radio" value="firefly"/>
-<span class="option-number">02</span><span class="v7-booking-option-photo"><img alt="Boardwalk beside water after dark" loading="lazy" src="assets/images/experiences/firefly-boardwalk.webp"/></span>
-<span class="option-copy">
-<strong>Firefly Boardwalk</strong>
-<small>Experience the mangrove landscape after sunset.</small>
-<em>Wildlife viewing depends on natural conditions.</em>
-</span>
-<span class="option-price">₱400<small>/ person</small></span>
-</label>
-<label class="booking-option">
-<input name="experience" type="radio" value="night-kayak"/>
-<span class="option-number">03</span><span class="v7-booking-option-photo"><img alt="Night sky scene at Kingfisher Park" loading="lazy" src="assets/images/experiences/night-kayak.webp"/></span>
-<span class="option-copy">
-<strong>Fireflies + Night Kayak</strong>
-<small>Boardwalk viewing plus kayaking for bioluminescent plankton and additional firefly viewing.</small>
-<em>Conditions can vary with weather, wind, moonlight and tide.</em>
-</span>
-<span class="option-price">₱600<small>/ person</small></span>
-</label>
-<label class="booking-option">
-<input name="experience" type="radio" value="complete"/>
-<span class="option-number">04</span><span class="v7-booking-option-photo"><img alt="Sunset reflecting on the water" loading="lazy" src="assets/images/experiences/complete-experience.webp"/></span>
-<span class="option-copy">
-<strong>The Complete Experience</strong>
-<small>Combine the three current activities in one visit.</small>
-<em>Exact sequence and timing remain subject to park confirmation.</em>
-</span>
-<span class="option-price">₱1,000<small>/ person</small></span>
-</label>
-</fieldset>
-<div class="step-actions">
-<a class="booking-back-home" href="experiences.html">← BACK TO EXPERIENCES</a>
-<button class="button booking-next" data-next="" type="button">CONTINUE <span aria-hidden="true">→</span></button>
-</div>
-</section>
-<!-- STEP 2 -->
-<section aria-labelledby="step-2-title" class="booking-step expectation-step" data-step="2" hidden="">
-<div class="step-heading">
-<span>STEP 02</span>
-<h2 id="step-2-title" tabindex="-1">Know what to expect.</h2>
-<p>Review the character of your selected experience before choosing a date.</p>
-</div>
-<div class="expectation-panel">
-<div class="expectation-topline">
-<span id="expectation-type">SELECTED EXPERIENCE</span>
-<strong id="expectation-price">—</strong>
-</div>
-<h3 id="expectation-title">Your experience</h3>
-<p id="expectation-intro">Choose an experience first to see the most relevant visitor notes.</p>
-<ul class="expectation-points" id="expectation-points"></ul>
-</div>
-<div aria-label="Before you book" class="expectation-basics">
-<article>
-<span>01</span>
-<strong>Dress for nature</strong>
-<p>Wear comfortable clothing and suitable footwear for outdoor, dark or uneven conditions.</p>
-</article>
-<article>
-<span>02</span>
-<strong>Follow your guide</strong>
-<p>Observe park and guide instructions, especially around water, paths and wildlife-viewing areas.</p>
-</article>
-<article>
-<span>03</span>
-<strong>Respect the habitat</strong>
-<p>For firefly tours, apply insect repellent before entering the park. Do not touch or catch fireflies or mangrove leaves; avoid flash photography and keep noise low.</p>
-</article>
-</div>
-<div class="step-actions">
-<button class="booking-prev" data-prev="" type="button">← BACK</button>
-<button class="button booking-next" data-next="" type="button">CHOOSE DATE <span aria-hidden="true">→</span></button>
-</div>
-</section>
-<!-- STEP 3 -->
-<section aria-labelledby="step-3-title" class="booking-step" data-step="3" hidden="">
-<div class="step-heading">
-<span>STEP 03</span>
-<h2 id="step-3-title" tabindex="-1">Choose a preferred date.</h2>
-<p>Final activity time slots will appear only when confirmed availability is configured.</p>
-</div>
-<div class="date-time-grid">
-<div class="field-group">
-<label for="visit-date">Preferred visit date</label>
-<input id="visit-date" name="visitDate" required="" type="date"/>
-<small>Select a preferred visit date for this booking prototype.</small>
-</div>
-<div class="time-pending">
-<span class="time-status">TIME SLOT</span>
-<strong>To be confirmed by Kingfisher Park</strong>
-<p>
-                    The live booking system will display only confirmed availability and time slots.
-                  </p>
-</div>
-</div>
-<label class="acknowledge-box">
-<input name="timePendingAck" required="" type="checkbox"/>
+<div class="page-width footer-grid">
+<div class="footer-brand">
+<a aria-label="Kingfisher Park home" class="footer-logo-lockup" href="index.html">
+<img alt="" height="512" src="assets/logo/kingfisher-park-logo-512.webp" width="512"/>
 <span>
-                  I understand that the exact activity time will be shown only when confirmed availability is configured.
-                </span>
-</label>
-<div class="step-actions">
-<button class="booking-prev" data-prev="" type="button">← BACK</button>
-<button class="button booking-next" data-next="" type="button">CONTINUE <span aria-hidden="true">→</span></button>
-</div>
-</section>
-<!-- STEP 4 -->
-<section aria-labelledby="step-4-title" class="booking-step" data-step="4" hidden="">
-<div class="step-heading">
-<span>STEP 04</span>
-<h2 id="step-4-title" tabindex="-1">How many guests?</h2>
-<p>Current pricing is per person.</p>
-</div>
-<div class="guest-control">
-<button aria-label="Decrease guests" data-guest-minus="" type="button">−</button>
-<div>
-<input id="guest-count" inputmode="numeric" min="1" name="guests" required="" type="number" value="1"/>
-<label for="guest-count">guest<span id="guest-plural"></span></label>
-</div>
-<button aria-label="Increase guests" data-guest-plus="" type="button">+</button>
-</div>
-<p class="guest-note">
-                Current pricing is per person. Any final capacity limits or special-rate policies will appear only after they are confirmed.
-              </p>
-<div class="step-actions">
-<button class="booking-prev" data-prev="" type="button">← BACK</button>
-<button class="button booking-next" data-next="" type="button">CONTINUE <span aria-hidden="true">→</span></button>
-</div>
-</section>
-<!-- STEP 5 -->
-<section aria-labelledby="step-5-title" class="booking-step" data-step="5" hidden="">
-<div class="step-heading">
-<span>STEP 05</span>
-<h2 id="step-5-title" tabindex="-1">Guest details.</h2>
-<p>Enter the contact details needed to manage your reservation.</p>
-</div>
-<div class="details-grid">
-<div class="field-group field-wide">
-<label for="full-name">Full name</label>
-<input autocomplete="name" id="full-name" name="fullName" required="" type="text"/>
-</div>
-<div class="field-group">
-<label for="email">Email</label>
-<input autocomplete="email" id="email" name="email" required="" type="email"/>
-</div>
-<div class="field-group">
-<label for="mobile">Mobile / WhatsApp</label>
-<input autocomplete="tel" id="mobile" name="mobile" required="" type="tel"/>
-</div>
-<div class="field-group">
-<label for="hotel">Hotel / accommodation <span>optional</span></label>
-<input autocomplete="organization" id="hotel" name="hotel" type="text"/>
-</div>
-<div class="field-group">
-<label for="contact-pref">Preferred contact</label>
-<select id="contact-pref" name="contactPreference">
-<option value="email">Email</option>
-<option value="mobile">Mobile / WhatsApp</option>
-</select>
-</div>
-<div class="field-group field-wide">
-<label for="requests">Special requests <span>optional</span></label>
-<textarea id="requests" maxlength="500" name="requests" rows="4"></textarea>
-</div>
-</div>
-<div class="step-actions">
-<button class="booking-prev" data-prev="" type="button">← BACK</button>
-<button class="button booking-next" data-next="" type="button">REVIEW BOOKING <span aria-hidden="true">→</span></button>
-</div>
-</section>
-<!-- STEP 6 -->
-<section aria-labelledby="step-6-title" class="booking-step" data-step="6" hidden="">
-<div class="step-heading">
-<span>STEP 06</span>
-<h2 id="step-6-title" tabindex="-1">Review before checkout.</h2>
-<p>Check the details and the current per-person calculation.</p>
-</div>
-<div class="review-card">
-<dl>
-<div><dt>Experience</dt><dd id="review-experience">—</dd></div>
-<div><dt>Visit date</dt><dd id="review-date">—</dd></div>
-<div><dt>Time</dt><dd>To be confirmed by Kingfisher Park</dd></div>
-<div><dt>Guest</dt><dd id="review-guest">—</dd></div>
-<div><dt>Email</dt><dd id="review-email">—</dd></div>
-<div><dt>Mobile</dt><dd id="review-mobile">—</dd></div>
-</dl>
-<div class="review-total">
-<span id="review-rate">₱0 × 0 guests</span>
-<strong id="review-total">₱0</strong>
-<small>No transaction or convenience fee is assumed.</small>
-</div>
-</div>
-<div class="policy-preview">
-<span class="policy-status">POLICY STATUS</span>
-<div>
-<strong>Already reflected in prototype</strong>
-<p>Tide/weather/natural-condition notices and responsible-viewing guidance.</p>
-</div>
-<div>
-<strong>Final booking terms</strong>
-<p>Cancellation, refund, rescheduling, no-show and final payment policies will appear before live checkout.</p>
-</div>
-</div>
-<label class="acknowledge-box">
-<input name="reviewAck" required="" type="checkbox"/>
-<span>
-                  I have reviewed the prototype booking information and understand that this is
-                  not a real reservation.
-                </span>
-</label>
-<div class="step-actions">
-<button class="booking-prev" data-prev="" type="button">← EDIT DETAILS</button>
-<button class="button booking-next" data-next="" type="button">CONTINUE TO DEMO PAYMENT <span aria-hidden="true">→</span></button>
-</div>
-</section>
-<!-- STEP 7 -->
-<section aria-labelledby="step-7-title" class="booking-step" data-step="7" hidden="">
-<div class="step-heading">
-<span>STEP 07</span>
-<h2 id="step-7-title" tabindex="-1">Demo checkout.</h2>
-<p>No real payment credentials are requested or stored.</p>
-</div>
-<div class="demo-payment-panel">
-<div aria-hidden="true" class="demo-payment-lock">◇</div>
-<span>SECURE PAYMENT · WIX STAGE</span>
-<h3 id="payment-total">₱0</h3>
+<strong>KINGFISHER PARK</strong>
+<small>BIODIVERSITY HAVEN · CORON, PALAWAN</small>
+</span>
+</a>
 <p>
-                  In the final Wix site, this area will connect to the approved secure payment provider.
-                </p>
-<p class="demo-payment-disclaimer" id="demo-payment-disclaimer">
-                  Demo only — clicking the button below does not contact a payment gateway,
-                  reserve a slot, charge a card, or create a live Kingfisher Park booking.
-                </p>
-<div class="demo-payment-notes">
-<div>
-<strong>THIS PROTOTYPE</strong>
-<small>Simulates success only.</small>
+          A nature destination shaped by mangroves, biodiversity and meaningful day-to-night experiences.
+        </p>
 </div>
-<div>
-<strong>FINAL WEBSITE</strong>
-<small>Uses an approved secure payment provider.</small>
+<nav aria-label="Footer navigation" class="footer-nav">
+<span>EXPLORE</span>
+<a href="the-park.html">The Park</a>
+<a href="experiences.html">Experiences</a>
+<a href="biodiversity.html">Biodiversity</a>
+<a href="stories.html">Stories</a>
+<a href="plan-your-visit.html">Plan Your Visit</a>
+</nav>
+<div class="footer-visit">
+<span>VISIT</span>
+<strong>1:00 PM — 9:00 PM</strong>
+<p>Coron, Palawan<br/>Philippines</p>
+<a href="https://web.facebook.com/KingfisherPark" rel="noopener noreferrer" target="_blank">
+          Facebook / Messenger ↗
+        </a>
+</div>
+<div class="footer-book">
+<span>RESERVATIONS</span>
+<p>Choose your experience and plan your visit.</p>
+<a class="footer-book-link" href="booking.html">BOOK NOW →</a>
 </div>
 </div>
-</div>
-<div class="step-actions">
-<button class="booking-prev" data-prev="" type="button">← BACK</button>
-<button aria-describedby="demo-payment-disclaimer" class="button demo-pay-button" id="simulate-payment" type="button">
-                  SIMULATE SUCCESSFUL PAYMENT
-                  <span aria-hidden="true">→</span>
-</button>
-</div>
-</section>
-<!-- STEP 8 -->
-<section aria-labelledby="step-8-title" class="booking-step booking-confirmation" data-step="8" hidden="">
-<div aria-hidden="true" class="confirmation-mark">✓</div>
-<div class="step-heading">
-<span>DEMO CONFIRMATION</span>
-<h2 id="step-8-title" tabindex="-1">Your prototype booking is complete.</h2>
-<p>No real reservation or payment was created.</p>
-</div>
-<div class="confirmation-card">
-<div class="confirmation-top">
-<div>
-<span>DEMO REFERENCE</span>
-<strong id="confirmation-reference">KP-DEMO-0000</strong>
-</div>
-<span class="demo-paid">DEMO PAID</span>
-</div>
-<dl>
-<div><dt>Guest</dt><dd id="confirmation-name">—</dd></div>
-<div><dt>Experience</dt><dd id="confirmation-experience">—</dd></div>
-<div><dt>Date</dt><dd id="confirmation-date">—</dd></div>
-<div><dt>Time</dt><dd>To be confirmed by Kingfisher Park</dd></div>
-<div><dt>Guests</dt><dd id="confirmation-guests">—</dd></div>
-<div><dt>Demo amount</dt><dd id="confirmation-total">—</dd></div>
-</dl>
-</div>
-<div class="confirmation-actions">
-<button class="button" id="print-summary" type="button">PRINT / SAVE SUMMARY</button>
-<button class="booking-prev" id="book-another" type="button">BOOK ANOTHER EXPERIENCE</button>
-<a class="booking-back-home" href="index.html">RETURN TO HOMEPAGE →</a>
-</div>
-</section>
-</form>
-</div>
-<aside aria-labelledby="summary-title" aria-live="polite" class="live-summary">
-<span class="summary-kicker">YOUR BOOKING</span>
-<h2 id="summary-title">Live summary</h2>
-<div class="summary-experience">
-<span id="summary-experience-label">No experience selected</span>
-<strong id="summary-rate">—</strong>
-</div>
-<dl class="summary-list">
-<div><dt>Date</dt><dd id="summary-date">—</dd></div>
-<div><dt>Time</dt><dd id="summary-time">Pending confirmation</dd></div>
-<div><dt>Guests</dt><dd id="summary-guests">1</dd></div>
-</dl>
-<div class="summary-total">
-<span>Estimated total</span>
-<strong id="summary-total">₱0</strong>
-</div>
-<p>
-            Current rates are per person. No unconfirmed booking, payment or convenience
-            fee has been added.
-          </p>
-<div class="summary-status">
-<span aria-hidden="true" class="summary-dot"></span>
-<span>VS Code demo · no live transaction</span>
-</div>
-</aside>
-</div>
-</section>
-</main>
-<footer class="booking-footer">
-<div class="page-width">
+<div class="page-width footer-bottom">
 <span>© 2026 KINGFISHER PARK</span>
-<a href="plan-your-visit.html#know-before">RESPONSIBLE VISITING</a>
-<a href="plan-your-visit.html">PLAN YOUR VISIT</a>
-<span>PRIVACY &amp; FINAL BOOKING TERMS · PENDING</span>
+<span>kingfisherpark.com</span>
+<span>PRIVACY POLICY · BOOKING TERMS</span>
 </div>
-</footer>
-<div aria-atomic="true" aria-live="polite" class="prototype-toast" id="prototype-toast" role="status"></div>
-<script src="js/main.js"></script>
-<script src="js/booking.js"></script>
-</body>
-</html>
+</footer><script src="js/main.js"></script><script src="js/client-tour-v8.js"></script></body></html>

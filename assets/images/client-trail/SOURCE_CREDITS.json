@@ -1,0 +1,158 @@
+[
+  {
+    "filename": "malbato-community-weaving.webp",
+    "source": "image(20261106-154611).png",
+    "crop_px": [
+      70,
+      341,
+      618,
+      727
+    ],
+    "width": 548,
+    "height": 386
+  },
+  {
+    "filename": "tahanan-greenhouse.webp",
+    "source": "image(20261106-154602).png",
+    "crop_px": [
+      65,
+      10,
+      383,
+      866
+    ],
+    "width": 318,
+    "height": 856
+  },
+  {
+    "filename": "school-farm-garden.webp",
+    "source": "image(20261106-154702).png",
+    "crop_px": [
+      38,
+      32,
+      355,
+      294
+    ],
+    "width": 317,
+    "height": 262
+  },
+  {
+    "filename": "local-farm-meal.webp",
+    "source": "image(20261106-154702).png",
+    "crop_px": [
+      372,
+      32,
+      686,
+      295
+    ],
+    "width": 314,
+    "height": 263
+  },
+  {
+    "filename": "regenerative-farm.webp",
+    "source": "image(20261106-154702).png",
+    "crop_px": [
+      39,
+      315,
+      354,
+      544
+    ],
+    "width": 315,
+    "height": 229
+  },
+  {
+    "filename": "community-table.webp",
+    "source": "image(20261106-154702).png",
+    "crop_px": [
+      372,
+      315,
+      687,
+      544
+    ],
+    "width": 315,
+    "height": 229
+  },
+  {
+    "filename": "farm-fieldwork.webp",
+    "source": "image(20261106-154554).png",
+    "crop_px": [
+      442,
+      16,
+      665,
+      181
+    ],
+    "width": 223,
+    "height": 165
+  },
+  {
+    "filename": "pitcher-hill-hiking.webp",
+    "source": "image(20261106-154554).png",
+    "crop_px": [
+      441,
+      186,
+      666,
+      358
+    ],
+    "width": 225,
+    "height": 172
+  },
+  {
+    "filename": "kilit-creek.webp",
+    "source": "image(20261106-154554).png",
+    "crop_px": [
+      441,
+      368,
+      666,
+      520
+    ],
+    "width": 225,
+    "height": 152
+  },
+  {
+    "filename": "chapel-on-hill.webp",
+    "source": "image(20261106-154554).png",
+    "crop_px": [
+      441,
+      529,
+      666,
+      694
+    ],
+    "width": 225,
+    "height": 165
+  },
+  {
+    "filename": "aerial-mangroves.webp",
+    "source": "image(20261106-154554).png",
+    "crop_px": [
+      441,
+      701,
+      666,
+      869
+    ],
+    "width": 225,
+    "height": 168
+  },
+  {
+    "filename": "kayak-in-mangroves.webp",
+    "source": "image(20261106-154718).png",
+    "crop_px": [
+      53,
+      201,
+      656,
+      508
+    ],
+    "width": 603,
+    "height": 307
+  },
+  {
+    "filename": "mangrove-sunset.webp",
+    "source": "image(20261106-154718).png",
+    "crop_px": [
+      53,
+      529,
+      659,
+      840
+    ],
+    "width": 606,
+    "height": 311
+  }
+]
