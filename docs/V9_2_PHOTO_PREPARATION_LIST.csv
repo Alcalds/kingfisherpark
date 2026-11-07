@@ -1,0 +1,11 @@
+﻿Subject,Exact file path,Current width,Current height,Current use,Suggested aspect ratio,Suggested enhanced file size,Request/condition
+Tour A nature trail lead,assets/images/client-trail/pitcher-hill-hiking.webp,225,172,Experiences Tour A card and HOME tour preview,4:3,1600×1200,Priority — low resolution; replace with original image
+Night kayak,assets/images/experiences/night-kayak.webp,1200,900,Experiences short-activity card,4:3,1200×900,Priority — verify actual night kayaking is visually identifiable
+Tour B mangrove sunset,assets/images/client-trail/mangrove-sunset.webp,606,311,Experiences Tour B card,16:9,1600×900,Original quality and attribution; do not remove creator logos without permission
+Tahanan Greenhouse,assets/images/client-trail/tahanan-greenhouse.webp,318,856,Plan Your Visit orientation photo,3:4,1200×1600,Needs high-resolution original; screenshot crop is tall
+Community weaving,assets/images/client-trail/malbato-community-weaving.webp,548,386,Stories & History,4:3,1200×900,Request original with clear usage permission
+Fieldwork,assets/images/client-trail/farm-fieldwork.webp,223,165,The Park / BERAE,4:3,1200×900,Request original; low resolution
+Mangrove kayak,assets/images/experiences/mangrove-kayak.webp,1277,958,Experiences individual card,4:3,1200×900,Keep if original source adequate
+Boardwalk,assets/images/experiences/firefly-boardwalk.webp,1400,786,Experiences individual card,4:3,1200×900,Keep if current source adequate
+Landscape hero,assets/images/hero/mangrove-aerial.webp,2048,1152,HOME signature Lightline Hero,16:9,1920×1080,Preserve approved HOME and scene transitions
+Forest community,assets/images/community/local-craft-2026.webp,1200,1600,HOME community panel,4:5,1200×1500,Preserve correct community subject; use original if available

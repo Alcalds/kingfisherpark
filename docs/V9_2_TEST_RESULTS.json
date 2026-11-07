@@ -1,0 +1,107 @@
+[
+  {
+    "test": "Tour A 2 adults",
+    "actual": "₱6,000",
+    "expected": "₱6,000",
+    "passed": true
+  },
+  {
+    "test": "Tour B 3 adults 2 children",
+    "actual": "₱15,600",
+    "expected": "₱15,600",
+    "passed": true
+  },
+  {
+    "test": "Tour B 11 adults uses 10+ tier",
+    "actual": "₱35,200",
+    "expected": "₱35,200",
+    "passed": true
+  },
+  {
+    "test": "Tour A 11 adults",
+    "actual": "₱24,200",
+    "expected": "₱24,200",
+    "passed": true
+  },
+  {
+    "test": "Tour A 12 adults",
+    "actual": "₱26,400",
+    "expected": "₱26,400",
+    "passed": true
+  },
+  {
+    "test": "Tour B 12 adults",
+    "actual": "₱38,400",
+    "expected": "₱38,400",
+    "passed": true
+  },
+  {
+    "test": "Tour B 10 adults",
+    "actual": "₱32,000",
+    "expected": "₱32,000",
+    "passed": true
+  },
+  {
+    "test": "30% illustrative deposit",
+    "actual": "Proposed 30% deposit: ₱9,600 payable now · Balance upon arrival: ₱22,400 · SUBJECT TO APPROVAL · NO LIVE PAYMENT",
+    "passed": true
+  },
+  {
+    "test": "100% illustrative option",
+    "actual": "Proposed 100% upfront: ₱32,000 payable now · Balance: ₱0 · SUBJECT TO APPROVAL · NO LIVE PAYMENT",
+    "passed": true
+  },
+  {
+    "test": "Early Riser excluded",
+    "actual": "₱32,000",
+    "expected": "₱32,000",
+    "passed": true
+  },
+  {
+    "test": "Kayak and boardwalk 3 paying participants",
+    "actual": "₱3,000",
+    "expected": "₱3,000",
+    "passed": true
+  },
+  {
+    "test": "HOME 390px mobile/tablet layout",
+    "actual": {
+      "scroll": 390,
+      "innerWidth": 390,
+      "kingfisherParkBottom": 230.875,
+      "statementTop": 326.359375,
+      "stickyOpacity": "0"
+    },
+    "passed": true,
+    "errors": []
+  },
+  {
+    "test": "Sticky CTA reappears after HERO",
+    "actual": "1",
+    "passed": true
+  },
+  {
+    "test": "HOME 900px mobile/tablet layout",
+    "actual": {
+      "scroll": 900,
+      "innerWidth": 900,
+      "kingfisherParkBottom": 420.515625,
+      "statementTop": 268.6875,
+      "stickyOpacity": "1"
+    },
+    "passed": true,
+    "errors": []
+  },
+  {
+    "test": "HOME 1280px mobile/tablet layout",
+    "actual": {
+      "scroll": 1280,
+      "innerWidth": 1280,
+      "kingfisherParkBottom": 466,
+      "statementTop": 282.1875,
+      "stickyOpacity": "1"
+    },
+    "passed": true,
+    "errors": []
+  }
+]

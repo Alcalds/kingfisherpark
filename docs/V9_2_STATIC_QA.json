@@ -1,0 +1,47 @@
+{
+  "pages": {
+    "biodiversity.html": {
+      "images": 15,
+      "section_count": 2,
+      "title": "Biodiversity \u2014 Kingfisher Park"
+    },
+    "booking.html": {
+      "images": 5,
+      "section_count": 4,
+      "title": "Book Online & Group Estimates \u2014 Kingfisher Park"
+    },
+    "experiences.html": {
+      "images": 8,
+      "section_count": 3,
+      "title": "Experiences \u2014 Kingfisher Park"
+    },
+    "index.html": {
+      "images": 12,
+      "section_count": 7,
+      "title": "Kingfisher Park \u2014 Coron, Palawan"
+    },
+    "plan-your-visit.html": {
+      "images": 7,
+      "section_count": 6,
+      "title": "Plan Your Visit \u2014 Kingfisher Park"
+    },
+    "stories.html": {
+      "images": 15,
+      "section_count": 4,
+      "title": "Stories & History \u2014 Kingfisher Park"
+    },
+    "the-park.html": {
+      "images": 14,
+      "section_count": 6,
+      "title": "The Park \u2014 Kingfisher Park"
+    },
+    "visitor-guide.html": {
+      "images": 4,
+      "section_count": 6,
+      "title": "Visitor Guide \u2014 Kingfisher Park"
+    }
+  },
+  "broken_local_references": [],
+  "live_wix_test_status": "NOT TESTED: prototype only",
+  "photo_updates": "NONE - pending user manual selection"
+}
