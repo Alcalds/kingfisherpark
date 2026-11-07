@@ -1,0 +1,67 @@
+/* KINGFISHER PARK V9.2 — targeted visitor-confidence refinement.
+   Scoped, additive rules. The approved HOME Lightline and global CSS remain intact. */
+.kp-v92 .v92-hero-definition{max-width:520px;margin:10px 0 8px;color:#FFFDF8;font:600 clamp(12px,1.2vw,16px)/1.45 Inter,Arial,sans-serif;letter-spacing:.015em;text-wrap:balance;text-shadow:0 2px 12px #00000066}
+.kp-v92 .v91-offering-card .v92-individual-price{display:block;font:800 20px/1.15 Inter,Arial,sans-serif;letter-spacing:0;color:#087C35}
+.kp-v92 .v92-individual-price span{font:500 12px/1.4 Inter,Arial,sans-serif;color:#536B5A}
+.kp-v92 .v92-experience-practical{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 0 34px;border:1px solid #CBDBC9;border-radius:17px;overflow:hidden;background:#FFFDF8}
+.kp-v92 .v92-experience-practical>div{min-width:0;padding:25px 28px}
+.kp-v92 .v92-experience-practical>div+div{border-left:1px solid #CBDBC9}
+.kp-v92 .v92-experience-practical strong{color:#0B2F24;display:block;font:700 15px/1.35 Inter,Arial,sans-serif;margin-bottom:8px}
+.kp-v92 .v92-experience-practical p{color:#5B7061;font:400 14px/1.7 Inter,Arial,sans-serif;margin:0}
+.kp-v92 .v92-individual-inquiry{margin-top:34px;background:#EDF2E6;border:1px solid #C6D9C7;padding:36px;border-radius:23px}
+.kp-v92 .v92-inquiry-heading{max-width:690px;margin-bottom:28px}
+.kp-v92 .v92-inquiry-heading h3{font:400 clamp(29px,3.1vw,42px)/1.08 Georgia,serif;color:#0B2F24;letter-spacing:-.035em;margin:14px 0 15px}
+.kp-v92 .v92-inquiry-heading p{font:400 15px/1.7 Inter,Arial,sans-serif;color:#52665A;margin:0}
+.kp-v92 #v92-individual-form fieldset{padding:0;margin:0 0 21px;border:0}
+.kp-v92 #v92-individual-form legend{margin-bottom:13px;font-weight:800;color:#0B2F24}
+.kp-v92 .v92-activity-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.kp-v92 .v92-activity-options label{display:flex;min-width:0;align-items:flex-start;gap:10px;padding:16px 14px;border:1px solid #BDD0C0;border-radius:12px;background:#FFFDF8;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+.kp-v92 .v92-activity-options label:has(input:checked){border-color:#087C35;background:#F7F9EE}
+.kp-v92 .v92-activity-options input{margin-top:4px;accent-color:#087C35}
+.kp-v92 .v92-activity-options strong{display:block;font:700 13px/1.45 Inter,Arial,sans-serif;color:#0B2F24}
+.kp-v92 .v92-activity-options small{display:block;font:500 12px/1.45 Inter,Arial,sans-serif;color:#5B7161;margin-top:7px}
+.kp-v92 .v92-inquiry-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.kp-v92 .v92-inquiry-fields label{display:block;font:800 13px/1.5 Inter,Arial,sans-serif;color:#0B2F24}
+.kp-v92 .v92-inquiry-fields input{display:block;width:100%;padding:11px 13px;margin-top:7px;border:1px solid #BDCEBE;border-radius:9px;background:#FFFDF8;font:500 14px Inter,Arial,sans-serif;color:#0B2F24}
+.kp-v92 .v92-inquiry-result{margin-top:24px;padding:20px 24px;background:#0B2F24;border-radius:15px;color:white}
+.kp-v92 .v92-inquiry-result>div{display:flex;align-items:baseline;justify-content:space-between;gap:15px}
+.kp-v92 .v92-inquiry-result span{font:650 14px/1.4 Inter,Arial,sans-serif;color:#D9E8DB}
+.kp-v92 .v92-inquiry-result strong{font:800 27px Inter,Arial,sans-serif;color:#DFF291}
+.kp-v92 .v92-inquiry-result p{font:400 12px/1.5 Inter,Arial,sans-serif;color:#D2E2D5;margin:9px 0 0}
+.kp-v92 #v92-individual-copy:disabled{opacity:.45;cursor:not-allowed}
+.kp-v92 .v9-book-individual-grid article{display:flex;flex-direction:column}
+.kp-v92 .v9-book-individual-grid article p:not(.v92-book-card-price){flex:1}
+.kp-v92 .v9-book-individual-grid .v92-book-card-price{padding:15px 0 0;margin:0 20px 22px;border-top:1px solid #D5E2D5;color:#087C35;font:800 18px/1.3 Inter,Arial,sans-serif}
+.kp-v92 .v92-book-card-price span{color:#627468;font:500 11px/1.5 Inter,Arial,sans-serif}
+.kp-v92 .v92-plan-confirm{margin-top:34px;background:#FFFDF8;border:1px solid #C6D9C7;border-left:4px solid #087C35;border-radius:12px;padding:23px 26px}
+.kp-v92 .v92-plan-confirm strong{display:block;font-size:15px;color:#0B2F24}
+.kp-v92 .v92-plan-confirm p{font:400 14px/1.7 Inter,Arial,sans-serif;color:#54685B;margin:10px 0 0}
+.kp-v92 .v92-guide-confidence{background:#F3F1E8;padding:76px 0}
+.kp-v92 .v92-guide-confidence h2{font:400 clamp(35px,4vw,55px)/1.05 Georgia,serif;letter-spacing:-.04em;color:#0B2F24;margin:14px 0 20px}
+.kp-v92 .v92-guide-confidence p{font:400 16px/1.75 Inter,Arial,sans-serif;color:#5F6F62;max-width:830px}
+@media(max-width:820px){.kp-v92 .v92-activity-options{grid-template-columns:1fr}.kp-v92 .v92-experience-practical{grid-template-columns:1fr}.kp-v92 .v92-experience-practical>div+div{border-left:0;border-top:1px solid #CBDBC9}}
+@media(max-width:580px){.kp-v92 .v92-inquiry-fields{grid-template-columns:1fr}.kp-v92 .v92-individual-inquiry{padding:23px 19px}.kp-v92 .v92-inquiry-result>div{align-items:start;flex-direction:column}.kp-v92 .v92-hero-definition{font-size:12px;max-width:310px}.kp-v92 .v92-guide-confidence{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){.kp-v92 .v92-activity-options label{transition:none}}
+
+/* V9.2 audit: prevent the mobile HOME title from colliding with the explanation.
+   Only the mobile breakpoint is adjusted; Desktop Lightline and scenes are unchanged. */
+@media (max-width:560px){
+  .kp-v92 .living-title-kingfisher{top:14%;left:16px;right:auto;font-size:clamp(44px,12vw,62px)}
+  .kp-v92 .living-title-park{top:24%;left:auto;right:18px;font-size:clamp(65px,18vw,86px)}
+  .kp-v92 .living-statement{left:16px;bottom:104px;width:calc(100% - 32px)}
+}
+/* Illustrative payment comparison; no checkout buttons or payment submissions. */
+.kp-v92 .v92-payment-choice{margin:26px 0 20px;padding:0;border:0}
+.kp-v92 .v92-payment-choice legend{color:#0B2F24;font:800 14px/1.4 Inter,Arial,sans-serif;margin-bottom:12px}
+.kp-v92 .v92-payment-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kp-v92 .v92-payment-options label{display:flex;align-items:flex-start;gap:9px;padding:16px 14px;border:1px solid #C6D9C7;background:#FFFDF8;border-radius:12px;cursor:pointer;color:#0B2F24;font:700 13px/1.5 Inter,Arial,sans-serif}
+.kp-v92 .v92-payment-options label:has(input:checked){border-color:#087C35;background:#F3F8EA}
+.kp-v92 .v92-payment-options input{accent-color:#087C35;margin-top:4px}
+.kp-v92 .v92-payment-options small{display:block;font:400 12px/1.5 Inter,Arial,sans-serif;color:#667669;margin-top:4px}
+.kp-v92 #v92-payment-help{font:400 12px/1.6 Inter,Arial,sans-serif;color:#657269;margin:11px 0 0}
+@media (max-width:640px){.kp-v92 .v92-payment-options{grid-template-columns:1fr}}
+@media(max-width:820px){
+ .kp-v92 .mobile-sticky-book{transition:opacity .2s ease, transform .2s ease}
+ .kp-v92.v92-hero-visible .mobile-sticky-book{opacity:0;pointer-events:none;transform:translateY(110%)}
+}
+@media(prefers-reduced-motion:reduce){.kp-v92 .mobile-sticky-book{transition:none}}
