@@ -1,0 +1,32 @@
+# Kingfisher Park — V9.3 Client-Confirmed Editorial Prototype (21 November 2026)
+
+## Scope and source provenance
+This is a **source-preserving update of the supplied V9.2 HTML/CSS/JS prototype**, not a Wix Studio site export or a deployed website. V9.2 HTML pages, HOME Living Light Hero, photography, existing CSS/JS and image navigation were retained. New responsive styles are appended in `css/v9-3-site.css`; new photos are under `assets/images/nov21-client-photo-pack`. The 18-image pack was supplied separately; only eight images with good subject fit were copied into this version. Do not confuse the supplied photos' older November 8 date with the November 21 policy changes.
+
+## Approved new client information represented in pages
+- **Two distinct tracks:** Kingfisher Park Beach individual activities (in charge: Sir Tong) versus BERAE guided tours (in charge: Ma’am Honey). The beach's Complete Experience is **not** Tour A/B.
+- **Beach's four options**: Mangrove Kayak ₱600; Firefly Boardwalk ₱400; Fireflies + Night Kayak ₱600; The Complete Experience ₱1,000 per person. Complete Experience consists of the three beach activities, subject to feasible sessions.
+- **Operating days and schedules:** park open seven days/week. Beach individual activities weekdays 1:00–9:00 PM; weekends 5:00–9:00 PM with advance notice; staff on call. BERAE Tour A 8:00 AM–5:00 PM; Tour B 8:00 AM–7:00 PM.
+- **Capacity:** park 100 guests/day; kayaking 28 people including guide(s) per kayaking session. Do not call this 28 guest seats; one guide implies 27 guests, additional guides lower the guest maximum.
+- **Children:** 0–6 free without food, 7–10 half the relevant full-rate price, 11+ full price. The existing tour rate tier is now expressed in terms of full-paying visitors 11+. The same age policy may require service-by-service safety/eligibility checks in Wix.
+- **Early Riser:** approved ₱150/head or ₱300 solo, arranged in advance and paid separately at the park.
+- **Payments:** full **100%** online payment in the real Wix Bookings checkout (not the V9.2 30% draft). No online payment is collected by this prototype.
+- **Guest-initiated cancellations:** eligible for refund if requested 3 full days or more before scheduled arrival; requested with 2 days or less remaining are non-refundable. Requests to change dates go through staff/Sir Tong and depend on available sessions. Park-initiated cancellations due to safety need a separately approved response.
+- **Travel and safety:** no transport provided; tricycle often recommended, vans may be arranged independently. Google Maps points to the beach; separate BERAE meeting details should be confirmed. All kayakers need properly fitted life vests and a guide, no solo unguided kayak trips. Some BERAE hills may be hard for some participants. Clean as you go, no litter, no taking plants/shells/animals or anything else belonging to the park, protect firefly habitats, avoid flash photography.
+- **Bioluminescent plankton:** prominently highlighted on HOME as a conditional *natural opportunity*, not a guaranteed sighting. The night boardwalk photo is labelled atmospheric rather than a plankton depiction, with decorative CSS glows clearly not photographic evidence.
+- **Food security:** emphasized in BERAE programs and local farming. The meal photo is illustrative; specific meals/dietary accommodation need staff confirmation.
+
+## Native Wix Bookings boundary
+`booking.html` is now a **non-transactional information handoff** that links to the official website, instructing visitors to use its existing native Wix Bookings entry. The former V9.2 estimate/30%-deposit scripts and data are archived in `docs/archive-v9-2-pricing-source/` and are **not loaded**. The Book Online service list, booking calendar, form, checkout, provider connection, email notifications, session capacities and price rules must be updated/tested **later inside Wix**, separately. A prototype page is not evidence of a live bookable session or a connected payment gateway.
+
+## Update required before publication
+1. **CURRENT PRINTED VISITOR GUIDE IS NOW OUTDATED:** the existing two-page `Kingfisher_Park_Visitor_Guide_Logo_Replaced_Original_Layout(1).pdf` uses old age ranges and undifferentiated 1–9 PM hours, and does not list the restored Complete Experience/cancellation policy. Do not silently label that PDF updated; replace the PDF only after design and client approval.
+2. Confirm application of new age-pricing policy **to each beach activity**, with child-safety eligibility for paddling and food inclusion where relevant. Rates in the site are displayed as standard per-person prices before family adjustments.
+3. Clarify the time measurement: exactly three calendar days versus 72 hours, the treatment of cancellation requests made between 2 and 3 days before, gateway processing fees and refund processing, and weather-related park cancellations. The prototype interprets the user's instruction as at least **three full days before** and two days or less as no refund.
+4. Confirm whether optional early riser is allowed for all activity types, which exact start times it affects, and whether it is excluded from the new 100%-online policy (recorded as on-site).
+5. Confirm exact BERAE meeting point, number of guides required per kayak outing, personal-vs-provided life-vest availability, food allergy handling and dietary menus, which beach combinations fit 5–9 PM weekend hours, contact numbers, and official live Wix booking route.
+6. Photo rights/model releases need checking. This version uses only photos with clear subject fit. Night and food images do not guarantee phenomena or menu. Do not assign bird species without verification.
+7. The supplied November 19 meeting PPTX contains older discussion and an apparently different introductory support fee (₱5,000 × 4 months); it is **not** used to override November 21 client schedule/age/payment decisions. Website developer maintenance proposal is excluded from public prototype.
+
+## What remained untouched
+The static V9.2 `js/main.js` preserves V4 Daylight / Golden Hour / After Dark behavior; this source is separate from the live Wix Studio Velo and `kp-v4-scenes` files. All original editorial pages and stylesheets remain, with the only new stylesheet loaded last. Old `docs/archive-v9-1` provenance is retained. Do not paste static prototype JS into Wix Studio; migrate content and native styling selectively.
