@@ -1,0 +1,91 @@
+{
+  "version": "V9.3 Nov 21, 2026 confirmed park operations; reference only, NOT a Wix checkout integration",
+  "currency": "PHP",
+  "park_open_days": 7,
+  "park_daily_guest_capacity": 100,
+  "beach": {
+    "in_charge": "Sir Tong",
+    "weekday_hours": "13:00-21:00",
+    "weekend_hours": "17:00-21:00",
+    "weekend_advance_notice_required": true,
+    "staff_on_call": true,
+    "activities": {
+      "Mangrove Kayak": 600,
+      "Firefly Boardwalk": 400,
+      "Fireflies + Night Kayak": 600,
+      "The Complete Experience": 1000
+    },
+    "complete_experience_includes": "three beach activities, subject to compatible time and conditions",
+    "kayak_total_people_including_guides": 28,
+    "life_jacket_required": true,
+    "guide_required_for_every_kayak": true
+  },
+  "berae": {
+    "in_charge": "Ma’am Honey",
+    "tour_A_hours": "08:00-17:00",
+    "tour_B_hours": "08:00-19:00",
+    "A_per_full_paying_guest_by_full_guest_count": {
+      "1": 4500,
+      "2": 3000,
+      "3": 2900,
+      "4": 2800,
+      "5": 2700,
+      "6": 2600,
+      "7": 2500,
+      "8": 2400,
+      "9": 2300,
+      "10": 2200
+    },
+    "B_per_full_paying_guest_by_full_guest_count": {
+      "1": 5500,
+      "2": 4000,
+      "3": 3900,
+      "4": 3800,
+      "5": 3700,
+      "6": 3600,
+      "7": 3500,
+      "8": 3400,
+      "9": 3300,
+      "10": 3200
+    },
+    "counts_11_plus_rate_at_10_tier": true,
+    "meals_included": true,
+    "transport_provided": false,
+    "focus": [
+      "biodiversity",
+      "regenerative agriculture",
+      "food security",
+      "guided trails",
+      "community learning"
+    ]
+  },
+  "guest_rates": {
+    "age_0_6": "free without food",
+    "age_7_10": "half applicable full-paying guest rate",
+    "age_11_plus": "full rate; counts toward full-paying group tier",
+    "individual_child_rules_may_require_safety_check": true
+  },
+  "early_riser": {
+    "confirmed_PHP_per_head": 150,
+    "confirmed_PHP_solo": 300,
+    "payment": "on site after arrangement"
+  },
+  "online_payment": {
+    "full_payment_percent": 100,
+    "native_wix_bookings_only": true,
+    "provider_connected_or_live_confirmed": false
+  },
+  "guest_cancellation": {
+    "refund_eligible_if_request_at_least_days_before": 3,
+    "non_refundable_with_days_remaining_at_most": 2,
+    "reschedule_contact": "park staff or Sir Tong",
+    "park_initiated_cancellation_policy": "staff confirmation required"
+  },
+  "booking_integration": "out of scope for prototype; separate native Wix Bookings implementation",
+  "natural_sightings_guaranteed": false,
+  "notes": [
+    "No official guest transportation; tricycle often recommended; van arrangements are visitor-owned.",
+    "Google Maps Kingfisher Park pin directs to beach; confirm BERAE meeting point separately.",
+    "Some visitors find hill climbs difficult."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": "V8 client-provided nature tour rates, 2026-11-06",
+  "currency": "PHP",
+  "rates_are_per_paying_adult": true,
+  "tourA": {
+    "1": 4500,
+    "2": 3000,
+    "3": 2900,
+    "4": 2800,
+    "5": 2700,
+    "6": 2600,
+    "7": 2500,
+    "8": 2400,
+    "9": 2300,
+    "10": 2200
+  },
+  "tourB": {
+    "1": 5500,
+    "2": 4000,
+    "3": 3900,
+    "4": 3800,
+    "5": 3700,
+    "6": 3600,
+    "7": 3500,
+    "8": 3400,
+    "9": 3300,
+    "10": 3200
+  },
+  "children_0_to_3": {
+    "price": "free",
+    "meal_included": false,
+    "counts_toward_adult_group_size": false
+  },
+  "children_4_to_12": {
+    "factor_of_adult_rate": 0.5,
+    "counts_toward_adult_group_size": false
+  },
+  "meals_included": true,
+  "transportation_included": false,
+  "early_riser": {
+    "per_head": 150,
+    "solo": 300,
+    "NOT_CALCULATED": "Confirm whether the surcharge applies to children and how solo is defined"
+  },
+  "deposit_policy": "not approved; do not compute or collect in static preview",
+  "visitor_request_status": "quote/inquiry only, NOT confirmed booking"
+}

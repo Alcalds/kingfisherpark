@@ -1,0 +1,90 @@
+{
+  "version": "V9.2 confirmed individual prices and 11+ rate rule, 2026-11-07",
+  "currency": "PHP",
+  "packages": {
+    "A": {
+      "label": "Tour A — Full-Day Nature Trail",
+      "per_adult_by_paying_adults": {
+        "1": 4500,
+        "2": 3000,
+        "3": 2900,
+        "4": 2800,
+        "5": 2700,
+        "6": 2600,
+        "7": 2500,
+        "8": 2400,
+        "9": 2300,
+        "10": 2200
+      }
+    },
+    "B": {
+      "label": "Tour B — Nature Trail + evening experiences",
+      "per_adult_by_paying_adults": {
+        "1": 5500,
+        "2": 4000,
+        "3": 3900,
+        "4": 3800,
+        "5": 3700,
+        "6": 3600,
+        "7": 3500,
+        "8": 3400,
+        "9": 3300,
+        "10": 3200
+      }
+    }
+  },
+  "ages_0_to_3": {
+    "factor": 0,
+    "meal_included": false,
+    "adult_tier_count": false
+  },
+  "ages_4_to_12": {
+    "factor": 0.5,
+    "meal_included": true,
+    "adult_tier_count": false
+  },
+  "age_13_plus": {
+    "factor": 1,
+    "adult_tier_count": true
+  },
+  "transport_included": false,
+  "meals_included": true,
+  "group_above_10": "Apply the per-adult rate from the 10 paying-adult tier to each paying adult; this is NOT a capacity assurance",
+  "early_riser": {
+    "per_head_PHP": 150,
+    "solo_PHP": 300,
+    "optional": true,
+    "payment": "ON SITE ONLY",
+    "eligibility": "unconfirmed",
+    "excluded_from_online_base": true
+  },
+  "deposit": {
+    "proposed_percent": 30,
+    "proposed_full_payment_option": true,
+    "client_approval_pending": true,
+    "live": false,
+    "early_riser_excluded": true
+  },
+  "individual_activities": {
+    "Mangrove Kayak": {
+      "confirmed_per_person_PHP": 600,
+      "individual_child_pricing": "not provided"
+    },
+    "Firefly Boardwalk": {
+      "confirmed_per_person_PHP": 400,
+      "individual_child_pricing": "not provided"
+    },
+    "Fireflies + Night Kayak": {
+      "confirmed_per_person_PHP": 600,
+      "individual_child_pricing": "not provided"
+    }
+  },
+  "complete_experience": {
+    "historical_v7_PHP": 1000,
+    "public_v9_status": "held for client decision"
+  },
+  "general_hours_provisional": "1:00 PM–9:00 PM",
+  "tour_a_b_start_times": "unconfirmed",
+  "booking_system": "Wix Bookings installed on actual Wix website; this source prototype NOT connected",
+  "reservation_status": "estimate / Messenger inquiry only"
+}
